@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GM Fire Services — Bombas Contra Incendio UL/FM</title>
+  <title>GM Fire Services — UL/FM Fire Suppression Pumps</title>
   <link rel="icon" type="image/png" href="Img/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -17,15 +17,23 @@
     <img src="Img/logo.png" alt="GM Fire Services" />
     <div class="nav-brand">
       GM Fire Services
-      <span>Distribuidor Autorizado Ruhrpumpen</span>
+      <span data-en="Authorized Ruhrpumpen Distributor" data-es="Distribuidor Autorizado Ruhrpumpen">Authorized Ruhrpumpen Distributor</span>
     </div>
   </div>
   <ul class="nav-links">
-    <li><a href="#about">Nosotros</a></li>
-    <li><a href="#products">Productos</a></li>
-    <li><a href="#certifications">Certificaciones</a></li>
-    <li><a href="#applications">Aplicaciones</a></li>
-    <li><a href="#contact" class="nav-cta">Contacto</a></li>
+    <li><a href="#about" data-en="About Us" data-es="Nosotros">About Us</a></li>
+    <li><a href="#products" data-en="Products" data-es="Productos">Products</a></li>
+    <li><a href="#certifications" data-en="Certifications" data-es="Certificaciones">Certifications</a></li>
+    <li><a href="#applications" data-en="Applications" data-es="Aplicaciones">Applications</a></li>
+    <li><a href="#contact" class="nav-cta" data-en="Contact" data-es="Contacto">Contact</a></li>
+    <!-- Language Toggle -->
+    <li class="lang-toggle-wrap">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span class="lang-option lang-en active">EN</span>
+        <span class="lang-divider">|</span>
+        <span class="lang-option lang-es">ES</span>
+      </button>
+    </li>
   </ul>
 </nav>
 
@@ -36,17 +44,15 @@
   <div class="hero-content">
     <div class="hero-badge">
       <div class="hero-badge-dot"></div>
-      <span>Distribución México · Bombas Certificadas</span>
+      <span data-en="Distribution Mexico · Certified Pumps" data-es="Distribución México · Bombas Certificadas">Distribution Mexico · Certified Pumps</span>
     </div>
     <h1>
-      <span class="thin">Protección</span><br>
-      <span class="accent">contra</span><br>
-      incendio
+      <span class="thin" data-en="Fire" data-es="Protección">Fire</span><br>
+      <span class="accent" data-en="suppression" data-es="contra">suppression</span><br>
+      <span data-en="protection" data-es="incendio">protection</span>
     </h1>
     <p class="hero-desc">
-      Especialistas en venta de bombas contra incendio de la marca <strong>Ruhrpumpen</strong>,
-      aprobadas por <strong>FM Global</strong> y listadas <strong>UL</strong> —
-      la más alta certificación de la industria.
+      <span data-en='Specialists in the sale of <strong>Ruhrpumpen</strong> fire suppression pumps, <strong>FM Global</strong> approved and <strong>UL</strong> listed — the highest certification in the industry.' data-es='Especialistas en venta de bombas contra incendio de la marca <strong>Ruhrpumpen</strong>, aprobadas por <strong>FM Global</strong> y listadas <strong>UL</strong> — la más alta certificación de la industria.'>Specialists in the sale of <strong>Ruhrpumpen</strong> fire suppression pumps, <strong>FM Global</strong> approved and <strong>UL</strong> listed — the highest certification in the industry.</span>
     </p>
     <div class="hero-certs">
       <div class="cert-badge">
@@ -65,8 +71,8 @@
       </div>
     </div>
     <div class="hero-actions">
-      <a href="#products" class="btn-primary">Ver Productos →</a>
-      <a href="#contact" class="btn-secondary">Solicitar Cotización</a>
+      <a href="#products" class="btn-primary" data-en="View Products →" data-es="Ver Productos →">View Products →</a>
+      <a href="#contact" class="btn-secondary" data-en="Request a Quote" data-es="Solicitar Cotización">Request a Quote</a>
     </div>
   </div>
 
@@ -116,11 +122,11 @@
     <div class="hero-stat-cards">
       <div class="stat-card">
         <div class="stat-num">UL/FM</div>
-        <div class="stat-label">Doble certificación</div>
+        <div class="stat-label" data-en="Dual certification" data-es="Doble certificación">Dual certification</div>
       </div>
       <div class="stat-card">
         <div class="stat-num">NFPA 20</div>
-        <div class="stat-label">Cumplimiento normativo</div>
+        <div class="stat-label" data-en="Regulatory compliance" data-es="Cumplimiento normativo">Regulatory compliance</div>
       </div>
     </div>
   </div>
@@ -130,37 +136,34 @@
 <section id="about">
   <div class="about-grid">
     <div class="about-text reveal">
-      <div class="section-label">Quiénes Somos</div>
-      <h2>Especialistas en<br><span class="accent">protección</span><br>contra incendio</h2>
+      <div class="section-label" data-en="Who We Are" data-es="Quiénes Somos">Who We Are</div>
+      <h2 data-en="Specialists in<br><span class='accent'>fire suppression</span><br>protection" data-es="Especialistas en<br><span class='accent'>protección</span><br>contra incendio">Specialists in<br><span class="accent">fire suppression</span><br>protection</h2>
       <p>
-        <strong>GM Fire Services</strong> es una empresa especializada en la distribución y
-        venta de sistemas de bombeo contra incendio de la marca Ruhrpumpen para el mercado mexicano.
+        <span data-en="<strong>GM Fire Services</strong> is a company specialized in the distribution and sale of Ruhrpumpen fire suppression pumping systems for the Mexican market." data-es="<strong>GM Fire Services</strong> es una empresa especializada en la distribución y venta de sistemas de bombeo contra incendio de la marca Ruhrpumpen para el mercado mexicano."><strong>GM Fire Services</strong> is a company specialized in the distribution and sale of Ruhrpumpen fire suppression pumping systems for the Mexican market.</span>
       </p>
       <p>
-        Nos enfocamos exclusivamente en bombas con las certificaciones más exigentes de la industria:
-        la aprobación <strong>FM (Factory Mutual)</strong> y el listado <strong>UL (Underwriters Laboratories)</strong>,
-        garantizando el más alto nivel de confiabilidad y seguridad en cada proyecto.
+        <span data-en="We focus exclusively on pumps with the most demanding certifications in the industry: the <strong>FM (Factory Mutual)</strong> approval and the <strong>UL (Underwriters Laboratories)</strong> listing, guaranteeing the highest level of reliability and safety on every project." data-es="Nos enfocamos exclusivamente en bombas con las certificaciones más exigentes de la industria: la aprobación <strong>FM (Factory Mutual)</strong> y el listado <strong>UL (Underwriters Laboratories)</strong>, garantizando el más alto nivel de confiabilidad y seguridad en cada proyecto.">We focus exclusively on pumps with the most demanding certifications in the industry: the <strong>FM (Factory Mutual)</strong> approval and the <strong>UL (Underwriters Laboratories)</strong> listing, guaranteeing the highest level of reliability and safety on every project.</span>
       </p>
       <div class="about-features">
         <div class="feature-item">
           <span class="feature-icon">🏆</span>
           <div>
-            <div class="feature-title">Producto Original Certificado</div>
-            <div class="feature-desc">Bombas Ruhrpumpen con aprobación FM y listado UL, 100% originales y con trazabilidad completa.</div>
+            <div class="feature-title" data-en="Certified Original Product" data-es="Producto Original Certificado">Certified Original Product</div>
+            <div class="feature-desc" data-en="Ruhrpumpen pumps with FM approval and UL listing — 100% original with full traceability." data-es="Bombas Ruhrpumpen con aprobación FM y listado UL, 100% originales y con trazabilidad completa.">Ruhrpumpen pumps with FM approval and UL listing — 100% original with full traceability.</div>
           </div>
         </div>
         <div class="feature-item">
           <span class="feature-icon">🔧</span>
           <div>
-            <div class="feature-title">Asesoría Técnica Especializada</div>
-            <div class="feature-desc">Orientación experta para seleccionar el sistema de bombeo adecuado según las exigencias de cada proyecto.</div>
+            <div class="feature-title" data-en="Specialized Technical Advisory" data-es="Asesoría Técnica Especializada">Specialized Technical Advisory</div>
+            <div class="feature-desc" data-en="Expert guidance for selecting the right pumping system for each project's specific requirements." data-es="Orientación experta para seleccionar el sistema de bombeo adecuado según las exigencias de cada proyecto.">Expert guidance for selecting the right pumping system for each project's specific requirements.</div>
           </div>
         </div>
         <div class="feature-item">
           <span class="feature-icon">📋</span>
           <div>
-            <div class="feature-title">Cumplimiento NFPA 20</div>
-            <div class="feature-desc">Todos nuestros equipos cumplen con la norma NFPA 20 para instalación de bombas centrífugas contra incendio.</div>
+            <div class="feature-title" data-en="NFPA 20 Compliance" data-es="Cumplimiento NFPA 20">NFPA 20 Compliance</div>
+            <div class="feature-desc" data-en="All our equipment complies with NFPA 20 standards for the installation of centrifugal fire pumps." data-es="Todos nuestros equipos cumplen con la norma NFPA 20 para instalación de bombas centrífugas contra incendio.">All our equipment complies with NFPA 20 standards for the installation of centrifugal fire pumps.</div>
           </div>
         </div>
       </div>
@@ -181,7 +184,7 @@
         </div>
         <div class="about-stat">
           <div class="about-stat-num">NFPA</div>
-          <div class="about-stat-label">Norma 20</div>
+          <div class="about-stat-label" data-en="Standard 20" data-es="Norma 20">Standard 20</div>
         </div>
       </div>
     </div>
@@ -191,8 +194,8 @@
 <!-- PRODUCTS -->
 <section id="products">
   <div class="products-header reveal">
-    <div class="section-label">Portafolio</div>
-    <h2>Bombas contra<br><span class="accent">incendio</span> Ruhrpumpen</h2>
+    <div class="section-label" data-en="Portfolio" data-es="Portafolio">Portfolio</div>
+    <h2 data-en="Ruhrpumpen fire<br><span class='accent'>suppression</span> pumps" data-es="Bombas contra<br><span class='accent'>incendio</span> Ruhrpumpen">Ruhrpumpen fire<br><span class="accent">suppression</span> pumps</h2>
   </div>
   <div class="products-grid">
 
@@ -200,10 +203,10 @@
       <div class="product-card-bg"></div>
       <div class="product-num">01</div>
       <div class="product-img-wrap">
-        <img src="Img/imagen2.jpg" alt="Bombas de proceso en voladizo" class="product-photo" />
+        <img src="Img/imagen2.jpg" alt="Overhung process pumps" class="product-photo" />
       </div>
-      <div class="product-name">Bombas de Proceso en Voladizo</div>
-      <p class="product-desc">Nuestra gama de bombas en voladizo (de succión horizontal) de trabajo pesado para aplicaciones de proceso, para todas las industrias, cumplen con las más recientes normas HI, ANSI, ISO y API.</p>
+      <div class="product-name" data-en="Overhung Process Pumps" data-es="Bombas de Proceso en Voladizo">Overhung Process Pumps</div>
+      <p class="product-desc" data-en="Our range of heavy-duty overhung (horizontal suction) process pumps for all industries comply with the latest HI, ANSI, ISO and API standards." data-es="Nuestra gama de bombas en voladizo (de succión horizontal) de trabajo pesado para aplicaciones de proceso, para todas las industrias, cumplen con las más recientes normas HI, ANSI, ISO y API.">Our range of heavy-duty overhung (horizontal suction) process pumps for all industries comply with the latest HI, ANSI, ISO and API standards.</p>
       <div class="product-tags">
         <span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue">ANSI / API</span>
       </div>
@@ -213,10 +216,10 @@
       <div class="product-card-bg"></div>
       <div class="product-num">02</div>
       <div class="product-img-wrap">
-        <img src="Img/imagen3.jpg" alt="Bombas verticales en línea" class="product-photo" />
+        <img src="Img/imagen3.jpg" alt="Vertical inline pumps" class="product-photo" />
       </div>
-      <div class="product-name">Bombas Verticales en Línea</div>
-      <p class="product-desc">Conformes con las normas HI, ANSI y API, nuestros modelos de bombas centrífugas verticales en línea ofrecen facilidad de instalación y mantenimiento, y un diseño que ahorra espacio.</p>
+      <div class="product-name" data-en="Vertical Inline Pumps" data-es="Bombas Verticales en Línea">Vertical Inline Pumps</div>
+      <p class="product-desc" data-en="Conforming to HI, ANSI and API standards, our vertical inline centrifugal pump models offer ease of installation and maintenance, with a space-saving design." data-es="Conformes con las normas HI, ANSI y API, nuestros modelos de bombas centrífugas verticales en línea ofrecen facilidad de instalación y mantenimiento, y un diseño que ahorra espacio.">Conforming to HI, ANSI and API standards, our vertical inline centrifugal pump models offer ease of installation and maintenance, with a space-saving design.</p>
       <div class="product-tags">
         <span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue">Vertical</span>
       </div>
@@ -226,10 +229,10 @@
       <div class="product-card-bg"></div>
       <div class="product-num">03</div>
       <div class="product-img-wrap">
-        <img src="Img/imagen4.jpg" alt="Bombas entre rodamientos" class="product-photo" />
+        <img src="Img/imagen4.jpg" alt="Between bearings pumps" class="product-photo" />
       </div>
-      <div class="product-name">Bombas entre Rodamientos</div>
-      <p class="product-desc">Diseñadas y fabricadas con la última tecnología, nuestra gama de bombas entre rodamientos horizontales, de etapa simple y multietapa, para trabajo pesado, cumplen con los últimos requisitos tanto de HI como de API.</p>
+      <div class="product-name" data-en="Between Bearings Pumps" data-es="Bombas entre Rodamientos">Between Bearings Pumps</div>
+      <p class="product-desc" data-en="Designed and built with the latest technology, our range of heavy-duty, single and multistage horizontal between-bearings pumps meet the latest HI and API requirements." data-es="Diseñadas y fabricadas con la última tecnología, nuestra gama de bombas entre rodamientos horizontales, de etapa simple y multietapa, para trabajo pesado, cumplen con los últimos requisitos tanto de HI como de API.">Designed and built with the latest technology, our range of heavy-duty, single and multistage horizontal between-bearings pumps meet the latest HI and API requirements.</p>
       <div class="product-tags">
         <span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue">Between Bearings</span>
       </div>
@@ -239,12 +242,12 @@
       <div class="product-card-bg"></div>
       <div class="product-num">04</div>
       <div class="product-img-wrap">
-        <img src="Img/imagen5.jpg" alt="Bombas centrífugas verticales" class="product-photo" />
+        <img src="Img/imagen5.jpg" alt="Vertical centrifugal pumps" class="product-photo" />
       </div>
-      <div class="product-name">Bombas Centrífugas Verticales</div>
-      <p class="product-desc">Nuestras bombas de eje vertical han sido líderes en el mercado desde los años 50, y están disponibles en modelos de etapa simple y multietapa, con una amplia gama de características hidráulicas y mecánicas.</p>
+      <div class="product-name" data-en="Vertical Centrifugal Pumps" data-es="Bombas Centrífugas Verticales">Vertical Centrifugal Pumps</div>
+      <p class="product-desc" data-en="Our vertical shaft pumps have been market leaders since the 1950s, available in single and multistage models with a wide range of hydraulic and mechanical features." data-es="Nuestras bombas de eje vertical han sido líderes en el mercado desde los años 50, y están disponibles en modelos de etapa simple y multietapa, con una amplia gama de características hidráulicas y mecánicas.">Our vertical shaft pumps have been market leaders since the 1950s, available in single and multistage models with a wide range of hydraulic and mechanical features.</p>
       <div class="product-tags">
-        <span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue">Multietapa</span>
+        <span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue" data-en="Multistage" data-es="Multietapa">Multistage</span>
       </div>
     </div>
 
@@ -252,10 +255,10 @@
       <div class="product-card-bg"></div>
       <div class="product-num">05</div>
       <div class="product-img-wrap">
-        <img src="Img/imagen6.jpg" alt="Bombas reciprocantes de pistón" class="product-photo" />
+        <img src="Img/imagen6.jpg" alt="Reciprocating piston pumps" class="product-photo" />
       </div>
-      <div class="product-name">Bombas Reciprocantes de Pistón</div>
-      <p class="product-desc">Nuestra gama de bombas reciprocantes de pistón están disponibles en una diversidad de tamaños, en formatos triples y quíntuples, y están diseñadas de conformidad con API 674 (última edición).</p>
+      <div class="product-name" data-en="Reciprocating Piston Pumps" data-es="Bombas Reciprocantes de Pistón">Reciprocating Piston Pumps</div>
+      <p class="product-desc" data-en="Our reciprocating piston pump range is available in a variety of sizes, in triplex and quintuplex formats, designed in accordance with API 674 (latest edition)." data-es="Nuestra gama de bombas reciprocantes de pistón están disponibles en una diversidad de tamaños, en formatos triples y quíntuples, y están diseñadas de conformidad con API 674 (última edición).">Our reciprocating piston pump range is available in a variety of sizes, in triplex and quintuplex formats, designed in accordance with API 674 (latest edition).</p>
       <div class="product-tags">
         <span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue">API 674</span>
       </div>
@@ -265,10 +268,10 @@
       <div class="product-card-bg"></div>
       <div class="product-num">06</div>
       <div class="product-img-wrap">
-        <img src="Img/imagen7.jpg" alt="Bombas de accionador magnético" class="product-photo" />
+        <img src="Img/imagen7.jpg" alt="Magnetic drive pumps" class="product-photo" />
       </div>
-      <div class="product-name">Bombas de Accionador Magnético</div>
-      <p class="product-desc">Nuestra gama de bombas centrífugas de accionamiento magnético sin sello son una clara elección para aplicaciones de manejo de químicos difíciles de sellar, conformes con la norma de diseño API 685 e ISO 2858.</p>
+      <div class="product-name" data-en="Magnetic Drive Pumps" data-es="Bombas de Accionador Magnético">Magnetic Drive Pumps</div>
+      <p class="product-desc" data-en="Our sealless magnetically driven centrifugal pump range is the clear choice for difficult-to-seal chemical handling applications, conforming to API 685 and ISO 2858 design standards." data-es="Nuestra gama de bombas centrífugas de accionamiento magnético sin sello son una clara elección para aplicaciones de manejo de químicos difíciles de sellar, conformes con la norma de diseño API 685 e ISO 2858.">Our sealless magnetically driven centrifugal pump range is the clear choice for difficult-to-seal chemical handling applications, conforming to API 685 and ISO 2858 design standards.</p>
       <div class="product-tags">
         <span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue">API 685 / ISO 2858</span>
       </div>
@@ -281,30 +284,30 @@
 <section id="certifications">
   <div class="cert-content">
     <div class="reveal">
-      <div class="section-label">Estándares de la Industria</div>
-      <h2>Doble certificación:<br><span class="accent">UL</span> y <span style="color:var(--blue-glow)">FM</span></h2>
+      <div class="section-label" data-en="Industry Standards" data-es="Estándares de la Industria">Industry Standards</div>
+      <h2 data-en="Dual certification:<br><span class='accent'>UL</span> and <span style='color:var(--blue-glow)'>FM</span>" data-es="Doble certificación:<br><span class='accent'>UL</span> y <span style='color:var(--blue-glow)'>FM</span>">Dual certification:<br><span class="accent">UL</span> and <span style="color:var(--blue-glow)">FM</span></h2>
     </div>
     <div class="cert-grid">
       <div class="cert-block ul reveal">
         <div class="cert-block-logo">UL</div>
-        <div class="cert-block-title">Underwriters Laboratories Listed</div>
-        <p class="cert-block-desc">El listado UL certifica que el producto ha sido probado exhaustivamente y cumple con los estándares de seguridad para sistemas de protección contra incendio reconocidos a nivel mundial.</p>
+        <div class="cert-block-title" data-en="Underwriters Laboratories Listed" data-es="Underwriters Laboratories Listed">Underwriters Laboratories Listed</div>
+        <p class="cert-block-desc" data-en="The UL listing certifies that the product has been thoroughly tested and meets internationally recognized safety standards for fire protection systems." data-es="El listado UL certifica que el producto ha sido probado exhaustivamente y cumple con los estándares de seguridad para sistemas de protección contra incendio reconocidos a nivel mundial.">The UL listing certifies that the product has been thoroughly tested and meets internationally recognized safety standards for fire protection systems.</p>
         <div class="cert-benefits">
-          <div class="cert-benefit">Pruebas rigurosas de rendimiento hidráulico</div>
-          <div class="cert-benefit">Verificación de materiales y construcción</div>
-          <div class="cert-benefit">Aceptación por autoridades locales (AHJ)</div>
-          <div class="cert-benefit">Reconocimiento internacional en proyectos</div>
+          <div class="cert-benefit" data-en="Rigorous hydraulic performance testing" data-es="Pruebas rigurosas de rendimiento hidráulico">Rigorous hydraulic performance testing</div>
+          <div class="cert-benefit" data-en="Materials and construction verification" data-es="Verificación de materiales y construcción">Materials and construction verification</div>
+          <div class="cert-benefit" data-en="Acceptance by local authorities (AHJ)" data-es="Aceptación por autoridades locales (AHJ)">Acceptance by local authorities (AHJ)</div>
+          <div class="cert-benefit" data-en="International recognition on projects" data-es="Reconocimiento internacional en proyectos">International recognition on projects</div>
         </div>
       </div>
       <div class="cert-block fm reveal reveal-delay-2">
         <div class="cert-block-logo">FM</div>
-        <div class="cert-block-title">Factory Mutual Approved</div>
-        <p class="cert-block-desc">La aprobación FM Global representa el estándar más exigente para equipos de protección contra incendio a nivel industrial, requerido en proyectos de manufactura, logística y edificios de alta ocupación.</p>
+        <div class="cert-block-title" data-en="Factory Mutual Approved" data-es="Factory Mutual Approved">Factory Mutual Approved</div>
+        <p class="cert-block-desc" data-en="FM Global approval represents the most demanding standard for industrial fire protection equipment, required on manufacturing, logistics and high-occupancy building projects." data-es="La aprobación FM Global representa el estándar más exigente para equipos de protección contra incendio a nivel industrial, requerido en proyectos de manufactura, logística y edificios de alta ocupación.">FM Global approval represents the most demanding standard for industrial fire protection equipment, required on manufacturing, logistics and high-occupancy building projects.</p>
         <div class="cert-benefits">
-          <div class="cert-benefit">Aprobación para industria de alto riesgo</div>
-          <div class="cert-benefit">Requerido por aseguradoras industriales líderes</div>
-          <div class="cert-benefit">Cumplimiento NFPA 20 garantizado</div>
-          <div class="cert-benefit">Reducción de primas de seguro certificada</div>
+          <div class="cert-benefit" data-en="Approval for high-risk industry" data-es="Aprobación para industria de alto riesgo">Approval for high-risk industry</div>
+          <div class="cert-benefit" data-en="Required by leading industrial insurers" data-es="Requerido por aseguradoras industriales líderes">Required by leading industrial insurers</div>
+          <div class="cert-benefit" data-en="Guaranteed NFPA 20 compliance" data-es="Cumplimiento NFPA 20 garantizado">Guaranteed NFPA 20 compliance</div>
+          <div class="cert-benefit" data-en="Certified insurance premium reduction" data-es="Reducción de primas de seguro certificada">Certified insurance premium reduction</div>
         </div>
       </div>
     </div>
@@ -314,18 +317,50 @@
 <!-- APPLICATIONS -->
 <section id="applications">
   <div class="apps-header reveal">
-    <div class="section-label">Sectores que Atendemos</div>
-    <h2>Aplicaciones<br><span class="accent">industriales</span></h2>
+    <div class="section-label" data-en="Sectors We Serve" data-es="Sectores que Atendemos">Sectors We Serve</div>
+    <h2 data-en="Industrial<br><span class='accent'>applications</span>" data-es="Aplicaciones<br><span class='accent'>industriales</span>">Industrial<br><span class="accent">applications</span></h2>
   </div>
   <div class="apps-grid">
-    <div class="app-card reveal"><div class="app-icon">🏭</div><div class="app-name">Industrial & Manufactura</div><p class="app-desc">Plantas de producción, ensamble y manufactura con requerimientos FM para cobertura de aseguradoras.</p></div>
-    <div class="app-card reveal reveal-delay-1"><div class="app-icon">🛢️</div><div class="app-name">Petróleo & Gas</div><p class="app-desc">Refinerías, terminales de almacenamiento, plataformas y plantas petroquímicas de alto riesgo.</p></div>
-    <div class="app-card reveal reveal-delay-2"><div class="app-icon">🏢</div><div class="app-name">Edificios Corporativos</div><p class="app-desc">Torres de oficinas, hoteles, centros comerciales y desarrollos inmobiliarios de gran escala.</p></div>
-    <div class="app-card reveal reveal-delay-3"><div class="app-icon">📦</div><div class="app-name">Centros de Distribución</div><p class="app-desc">Bodegas, almacenes logísticos y centros de distribución con estanterías de alta densidad.</p></div>
-    <div class="app-card reveal"><div class="app-icon">⚡</div><div class="app-name">Generación de Energía</div><p class="app-desc">Plantas termoeléctricas, subestaciones y centros de datos con requerimientos de protección crítica.</p></div>
-    <div class="app-card reveal reveal-delay-1"><div class="app-icon">🏥</div><div class="app-name">Sector Salud</div><p class="app-desc">Hospitales, clínicas y laboratorios donde la confiabilidad del sistema de protección es crítica.</p></div>
-    <div class="app-card reveal reveal-delay-2"><div class="app-icon">🔬</div><div class="app-name">Química & Farmacéutica</div><p class="app-desc">Plantas de producción química y farmacéutica con requerimientos de clasificación de áreas peligrosas.</p></div>
-    <div class="app-card reveal reveal-delay-3"><div class="app-icon">🚗</div><div class="app-name">Automotriz</div><p class="app-desc">Plantas de ensamble, talleres de pintura y almacenes de partes con protección certificada FM.</p></div>
+    <div class="app-card reveal">
+      <div class="app-icon">🏭</div>
+      <div class="app-name" data-en="Industrial & Manufacturing" data-es="Industrial & Manufactura">Industrial & Manufacturing</div>
+      <p class="app-desc" data-en="Production, assembly and manufacturing plants with FM requirements for insurer coverage." data-es="Plantas de producción, ensamble y manufactura con requerimientos FM para cobertura de aseguradoras.">Production, assembly and manufacturing plants with FM requirements for insurer coverage.</p>
+    </div>
+    <div class="app-card reveal reveal-delay-1">
+      <div class="app-icon">🛢️</div>
+      <div class="app-name" data-en="Oil & Gas" data-es="Petróleo & Gas">Oil & Gas</div>
+      <p class="app-desc" data-en="Refineries, storage terminals, offshore platforms and high-risk petrochemical plants." data-es="Refinerías, terminales de almacenamiento, plataformas y plantas petroquímicas de alto riesgo.">Refineries, storage terminals, offshore platforms and high-risk petrochemical plants.</p>
+    </div>
+    <div class="app-card reveal reveal-delay-2">
+      <div class="app-icon">🏢</div>
+      <div class="app-name" data-en="Corporate Buildings" data-es="Edificios Corporativos">Corporate Buildings</div>
+      <p class="app-desc" data-en="Office towers, hotels, shopping centers and large-scale real estate developments." data-es="Torres de oficinas, hoteles, centros comerciales y desarrollos inmobiliarios de gran escala.">Office towers, hotels, shopping centers and large-scale real estate developments.</p>
+    </div>
+    <div class="app-card reveal reveal-delay-3">
+      <div class="app-icon">📦</div>
+      <div class="app-name" data-en="Distribution Centers" data-es="Centros de Distribución">Distribution Centers</div>
+      <p class="app-desc" data-en="Warehouses, logistics centers and high-density racking distribution facilities." data-es="Bodegas, almacenes logísticos y centros de distribución con estanterías de alta densidad.">Warehouses, logistics centers and high-density racking distribution facilities.</p>
+    </div>
+    <div class="app-card reveal">
+      <div class="app-icon">⚡</div>
+      <div class="app-name" data-en="Power Generation" data-es="Generación de Energía">Power Generation</div>
+      <p class="app-desc" data-en="Thermoelectric plants, substations and data centers with critical protection requirements." data-es="Plantas termoeléctricas, subestaciones y centros de datos con requerimientos de protección crítica.">Thermoelectric plants, substations and data centers with critical protection requirements.</p>
+    </div>
+    <div class="app-card reveal reveal-delay-1">
+      <div class="app-icon">🏥</div>
+      <div class="app-name" data-en="Healthcare" data-es="Sector Salud">Healthcare</div>
+      <p class="app-desc" data-en="Hospitals, clinics and laboratories where protection system reliability is critical." data-es="Hospitales, clínicas y laboratorios donde la confiabilidad del sistema de protección es crítica.">Hospitals, clinics and laboratories where protection system reliability is critical.</p>
+    </div>
+    <div class="app-card reveal reveal-delay-2">
+      <div class="app-icon">🔬</div>
+      <div class="app-name" data-en="Chemical & Pharmaceutical" data-es="Química & Farmacéutica">Chemical & Pharmaceutical</div>
+      <p class="app-desc" data-en="Chemical and pharmaceutical production plants with hazardous area classification requirements." data-es="Plantas de producción química y farmacéutica con requerimientos de clasificación de áreas peligrosas.">Chemical and pharmaceutical production plants with hazardous area classification requirements.</p>
+    </div>
+    <div class="app-card reveal reveal-delay-3">
+      <div class="app-icon">🚗</div>
+      <div class="app-name" data-en="Automotive" data-es="Automotriz">Automotive</div>
+      <p class="app-desc" data-en="Assembly plants, paint shops and parts warehouses with FM certified protection." data-es="Plantas de ensamble, talleres de pintura y almacenes de partes con protección certificada FM.">Assembly plants, paint shops and parts warehouses with FM certified protection.</p>
+    </div>
   </div>
 </section>
 
@@ -333,16 +368,28 @@
 <section id="brand">
   <div class="brand-inner">
     <div class="brand-text reveal">
-      <div class="section-label">Nuestro Fabricante</div>
-      <h2>Tecnología<br><span class="accent">Ruhrpumpen</span></h2>
-      <p><strong>Ruhrpumpen</strong> es un fabricante global de bombas industriales y contra incendio, con más de 75 años de experiencia en tecnología de bombeo de alta ingeniería.</p>
-      <p>Con instalaciones de manufactura en Alemania, México, EE.UU. e India, Ruhrpumpen diseña y fabrica bombas que cumplen y exceden los más exigentes estándares: FM, UL, API, ANSI, ISO y NFPA.</p>
-      <p>Su línea contra incendio es reconocida mundialmente por su confiabilidad, desempeño hidráulico superior y larga vida de servicio.</p>
+      <div class="section-label" data-en="Our Manufacturer" data-es="Nuestro Fabricante">Our Manufacturer</div>
+      <h2 data-en="<span class='accent'>Ruhrpumpen</span><br>Technology" data-es="Tecnología<br><span class='accent'>Ruhrpumpen</span>"><span class="accent">Ruhrpumpen</span><br>Technology</h2>
+      <p><span data-en="<strong>Ruhrpumpen</strong> is a global manufacturer of industrial and fire suppression pumps with over 75 years of experience in high-engineering pumping technology." data-es="<strong>Ruhrpumpen</strong> es un fabricante global de bombas industriales y contra incendio, con más de 75 años de experiencia en tecnología de bombeo de alta ingeniería."><strong>Ruhrpumpen</strong> is a global manufacturer of industrial and fire suppression pumps with over 75 years of experience in high-engineering pumping technology.</span></p>
+      <p><span data-en="With manufacturing facilities in Germany, Mexico, the USA and India, Ruhrpumpen designs and manufactures pumps that meet and exceed the most demanding standards: FM, UL, API, ANSI, ISO and NFPA." data-es="Con instalaciones de manufactura en Alemania, México, EE.UU. e India, Ruhrpumpen diseña y fabrica bombas que cumplen y exceden los más exigentes estándares: FM, UL, API, ANSI, ISO y NFPA.">With manufacturing facilities in Germany, Mexico, the USA and India, Ruhrpumpen designs and manufactures pumps that meet and exceed the most demanding standards: FM, UL, API, ANSI, ISO and NFPA.</span></p>
+      <p><span data-en="Their fire suppression line is recognized worldwide for its reliability, superior hydraulic performance and long service life." data-es="Su línea contra incendio es reconocida mundialmente por su confiabilidad, desempeño hidráulico superior y larga vida de servicio.">Their fire suppression line is recognized worldwide for its reliability, superior hydraulic performance and long service life.</span></p>
       <div class="brand-stats">
-        <div class="brand-stat"><div class="brand-stat-num">75+</div><div class="brand-stat-label">Años de experiencia</div></div>
-        <div class="brand-stat"><div class="brand-stat-num">4</div><div class="brand-stat-label">Plantas de manufactura</div></div>
-        <div class="brand-stat"><div class="brand-stat-num">60+</div><div class="brand-stat-label">Países con presencia</div></div>
-        <div class="brand-stat"><div class="brand-stat-num">NFPA</div><div class="brand-stat-label">Cumplimiento norma 20</div></div>
+        <div class="brand-stat">
+          <div class="brand-stat-num">75+</div>
+          <div class="brand-stat-label" data-en="Years of experience" data-es="Años de experiencia">Years of experience</div>
+        </div>
+        <div class="brand-stat">
+          <div class="brand-stat-num">4</div>
+          <div class="brand-stat-label" data-en="Manufacturing plants" data-es="Plantas de manufactura">Manufacturing plants</div>
+        </div>
+        <div class="brand-stat">
+          <div class="brand-stat-num">60+</div>
+          <div class="brand-stat-label" data-en="Countries with presence" data-es="Países con presencia">Countries with presence</div>
+        </div>
+        <div class="brand-stat">
+          <div class="brand-stat-num">NFPA</div>
+          <div class="brand-stat-label" data-en="Standard 20 compliance" data-es="Cumplimiento norma 20">Standard 20 compliance</div>
+        </div>
       </div>
     </div>
     <div class="brand-logo-side reveal reveal-delay-2">
@@ -350,25 +397,21 @@
         <img src="Img/logo.jpg" alt="GM Fire Services Logo" />
       </div>
       <div class="brand-desc-block">
-        <strong>Distribuidor autorizado en México</strong><br>
-        GM Fire Services comercializa las bombas contra incendio Ruhrpumpen con aprobación FM y listado UL para proyectos en toda la República Mexicana.
+        <span data-en="<strong>Authorized distributor in Mexico</strong><br>GM Fire Services markets Ruhrpumpen FM-approved and UL-listed fire suppression pumps for projects throughout the Mexican Republic." data-es="<strong>Distribuidor autorizado en México</strong><br>GM Fire Services comercializa las bombas contra incendio Ruhrpumpen con aprobación FM y listado UL para proyectos en toda la República Mexicana."><strong>Authorized distributor in Mexico</strong><br>GM Fire Services markets Ruhrpumpen FM-approved and UL-listed fire suppression pumps for projects throughout the Mexican Republic.</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════
-     CONTACT — MEJORADO CON WHATSAPP + MAPA
-     ══════════════════════════════════════ -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="contact-content">
 
     <div class="reveal" style="text-align:center">
-      <div class="section-label" style="justify-content:center">Contacto</div>
-      <h2>¿Listo para<br><span class="accent">proteger</span> tu proyecto?</h2>
+      <div class="section-label" style="justify-content:center" data-en="Contact" data-es="Contacto">Contact</div>
+      <h2 data-en="Ready to<br><span class='accent'>protect</span> your project?" data-es="¿Listo para<br><span class='accent'>proteger</span> tu proyecto?">Ready to<br><span class="accent">protect</span> your project?</h2>
       <p class="contact-sub">
-        Contáctanos para recibir asesoría técnica especializada, información de productos
-        y cotizaciones para tu proyecto de protección contra incendio.
+        <span data-en="Contact us for specialized technical advice, product information and quotes for your fire protection project." data-es="Contáctanos para recibir asesoría técnica especializada, información de productos y cotizaciones para tu proyecto de protección contra incendio.">Contact us for specialized technical advice, product information and quotes for your fire protection project.</span>
       </p>
     </div>
 
@@ -381,7 +424,7 @@
         <div class="contact-card-value">+52 (33) 1693-0869</div>
         <a
           class="wa-btn"
-          href="https://wa.me/523316930869?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20bombas%20contra%20incendio%20Ruhrpumpen."
+          href="https://wa.me/523316930869?text=Hello%2C%20I%20am%20interested%20in%20learning%20more%20about%20your%20Ruhrpumpen%20fire%20suppression%20pumps."
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -389,24 +432,24 @@
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
             <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.122 1.523 5.854L.057 23.882l6.158-1.437A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.799 9.799 0 01-5.001-1.371l-.358-.213-3.714.867.94-3.619-.233-.373A9.762 9.762 0 012.182 12c0-5.419 4.399-9.818 9.818-9.818 5.42 0 9.818 4.399 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/>
           </svg>
-          Abrir en WhatsApp
+          <span data-en="Open in WhatsApp" data-es="Abrir en WhatsApp">Open in WhatsApp</span>
         </a>
-        <span class="wa-hint">Respuesta inmediata en horario laboral</span>
+        <span class="wa-hint" data-en="Immediate response during business hours" data-es="Respuesta inmediata en horario laboral">Immediate response during business hours</span>
       </div>
 
       <!-- Email -->
       <div class="contact-card">
         <div class="contact-card-icon">📧</div>
-        <div class="contact-card-title">Correo Electrónico</div>
+        <div class="contact-card-title" data-en="Email" data-es="Correo Electrónico">Email</div>
         <div class="contact-card-value">
           <a href="mailto:contacto@gmfireservices.com">contacto@gmfireservices.com</a>
         </div>
         <p style="font-size:13px;color:#5a7a9a;margin-top:10px;text-align:center;line-height:1.5">
-          Envíanos tus especificaciones<br>y recibe una cotización detallada
+          <span data-en="Send us your specifications<br>and receive a detailed quote" data-es="Envíanos tus especificaciones<br>y recibe una cotización detallada">Send us your specifications<br>and receive a detailed quote</span>
         </p>
       </div>
 
-      <!-- Mapa Guadalajara → Plaza Patria -->
+      <!-- Map -->
       <div class="contact-card contact-card--map">
         <div class="map-container">
           <iframe
@@ -417,7 +460,7 @@
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Mapa Plaza Patria Guadalajara"
+            title="Map Plaza Patria Guadalajara"
           ></iframe>
           <div class="map-pin-badge">
             <span class="pin-dot"></span>
@@ -425,16 +468,16 @@
           </div>
         </div>
         <div class="map-info">
-          <div class="contact-card-title">Ubicación</div>
+          <div class="contact-card-title" data-en="Location" data-es="Ubicación">Location</div>
           <div class="contact-card-value" style="font-size:15px">Plaza Patria, Guadalajara, Jal.</div>
           <a
             class="maps-btn"
             href="https://www.google.com/maps/dir/?api=1&destination=Plaza+Patria,+Guadalajara,+Jalisco,+M%C3%A9xico"
             target="_blank"
             rel="noopener noreferrer"
-          >
-            📍 Cómo llegar en Google Maps →
-          </a>
+            data-en="📍 Get directions in Google Maps →"
+            data-es="📍 Cómo llegar en Google Maps →"
+          >📍 Get directions in Google Maps →</a>
         </div>
       </div>
 
@@ -442,24 +485,20 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════
-     FOOTER — PROFESIONAL + DANIELSOFTWORKS
-     ══════════════════════════════════════ -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-main">
 
-    <!-- Columna 1: Marca -->
     <div class="footer-col footer-col--brand">
       <div class="footer-logo-wrap">
         <img src="Img/logo.png" alt="GM Fire Services" class="footer-logo-img" />
         <div>
           <div class="footer-brand-name">GM Fire Services</div>
-          <div class="footer-brand-sub">Distribuidor Autorizado Ruhrpumpen · México</div>
+          <div class="footer-brand-sub" data-en="Authorized Ruhrpumpen Distributor · Mexico" data-es="Distribuidor Autorizado Ruhrpumpen · México">Authorized Ruhrpumpen Distributor · Mexico</div>
         </div>
       </div>
       <p class="footer-desc">
-        Especialistas en la distribución de bombas contra incendio Ruhrpumpen certificadas
-        FM y UL para proyectos industriales y comerciales en toda la República Mexicana.
+        <span data-en="Specialists in the distribution of FM and UL certified Ruhrpumpen fire suppression pumps for industrial and commercial projects throughout the Mexican Republic." data-es="Especialistas en la distribución de bombas contra incendio Ruhrpumpen certificadas FM y UL para proyectos industriales y comerciales en toda la República Mexicana.">Specialists in the distribution of FM and UL certified Ruhrpumpen fire suppression pumps for industrial and commercial projects throughout the Mexican Republic.</span>
       </p>
       <div class="footer-badges">
         <span class="footer-badge footer-badge--ul">UL Listed</span>
@@ -468,27 +507,25 @@
       </div>
     </div>
 
-    <!-- Columna 2: Navegación -->
     <div class="footer-col">
-      <div class="footer-col-title">Navegación</div>
+      <div class="footer-col-title" data-en="Navigation" data-es="Navegación">Navigation</div>
       <ul class="footer-nav">
-        <li><a href="#about">Quiénes somos</a></li>
-        <li><a href="#products">Productos</a></li>
-        <li><a href="#certifications">Certificaciones</a></li>
-        <li><a href="#applications">Aplicaciones</a></li>
+        <li><a href="#about" data-en="Who we are" data-es="Quiénes somos">Who we are</a></li>
+        <li><a href="#products" data-en="Products" data-es="Productos">Products</a></li>
+        <li><a href="#certifications" data-en="Certifications" data-es="Certificaciones">Certifications</a></li>
+        <li><a href="#applications" data-en="Applications" data-es="Aplicaciones">Applications</a></li>
         <li><a href="#brand">Ruhrpumpen</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
       </ul>
     </div>
 
-    <!-- Columna 3: Contacto -->
     <div class="footer-col">
-      <div class="footer-col-title">Contacto Directo</div>
+      <div class="footer-col-title" data-en="Direct Contact" data-es="Contacto Directo">Direct Contact</div>
       <div class="footer-contact-list">
 
         <a
           class="footer-contact-row footer-contact-row--wa"
-          href="https://wa.me/523316930869?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20bombas%20contra%20incendio%20Ruhrpumpen."
+          href="https://wa.me/523316930869?text=Hello%2C%20I%20am%20interested%20in%20learning%20more%20about%20your%20Ruhrpumpen%20fire%20suppression%20pumps."
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -507,7 +544,7 @@
         <a class="footer-contact-row" href="mailto:contacto@gmfireservices.com">
           <span class="footer-contact-icon">📧</span>
           <div>
-            <div class="footer-contact-label">Correo</div>
+            <div class="footer-contact-label" data-en="Email" data-es="Correo">Email</div>
             <div class="footer-contact-val">contacto@gmfireservices.com</div>
           </div>
         </a>
@@ -520,28 +557,26 @@
         >
           <span class="footer-contact-icon">📍</span>
           <div>
-            <div class="footer-contact-label">Ubicación</div>
+            <div class="footer-contact-label" data-en="Location" data-es="Ubicación">Location</div>
             <div class="footer-contact-val">Plaza Patria, Guadalajara, Jal.</div>
           </div>
         </a>
 
       </div>
-      <div class="footer-coverage">Cobertura: República Mexicana</div>
+      <div class="footer-coverage" data-en="Coverage: Mexican Republic" data-es="Cobertura: República Mexicana">Coverage: Mexican Republic</div>
     </div>
 
   </div>
 
-  <!-- Divisor -->
   <div class="footer-divider"></div>
 
-  <!-- Barra inferior -->
   <div class="footer-bottom">
     <div class="footer-copy">
-      © 2026 GM Fire Services · Todos los derechos reservados
+      <span data-en="© 2026 GM Fire Services · All rights reserved" data-es="© 2026 GM Fire Services · Todos los derechos reservados">© 2026 GM Fire Services · All rights reserved</span>
     </div>
     <div class="footer-dev-credit">
-      <span class="footer-dev-text">Desarrollado por</span>
-      <a class="footer-dev-badge" href="mailto:contacto@danielsoftworks.com" title="DanielSoftworks — Desarrollo Web Profesional">
+      <span class="footer-dev-text" data-en="Developed by" data-es="Desarrollado por">Developed by</span>
+      <a class="footer-dev-badge" href="mailto:contacto@danielsoftworks.com" title="DanielSoftworks — Professional Web Development">
         <span class="ds-logo-text"><span class="ds-accent">Daniel</span>Softworks</span>
         <span class="ds-tag">Dev</span>
       </a>
@@ -549,11 +584,28 @@
   </div>
 </footer>
 
-<!-- ══════════════════════════════════════
-     ESTILOS ADICIONALES (contact + footer)
-     Agrega estos bloques a tu styles.css
-     ══════════════════════════════════════ -->
 <style>
+/* ── LANGUAGE TOGGLE ─────────────────────── */
+.lang-toggle-wrap { display: flex; align-items: center; }
+.lang-toggle {
+  display: flex; align-items: center; gap: 3px;
+  background: rgba(42,127,212,.08);
+  border: 1px solid rgba(42,127,212,.22);
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background .2s, border-color .2s;
+  font-family: 'Barlow', sans-serif;
+}
+.lang-toggle:hover { background: rgba(42,127,212,.18); border-color: rgba(42,127,212,.4); }
+.lang-option {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+  color: #4a6a88; transition: color .2s;
+  line-height: 1;
+}
+.lang-option.active { color: #5aadff; }
+.lang-divider { font-size: 10px; color: #253a52; }
+
 /* ── CONTACT ─────────────────────────────── */
 #contact { padding: 96px 40px; background: linear-gradient(180deg, #050f24 0%, #071830 100%); border-top: 1px solid rgba(42,127,212,.15); }
 .contact-content { max-width: 1060px; margin: 0 auto; }
@@ -578,7 +630,6 @@
 .contact-card-value a { color: #e0eaff; text-decoration: none; transition: color .2s; }
 .contact-card-value a:hover { color: #5aadff; }
 
-/* WhatsApp button */
 .wa-btn {
   display: inline-flex; align-items: center; gap: 9px;
   background: #25d366; color: #fff; font-weight: 700; font-size: 14px;
@@ -590,7 +641,6 @@
 .wa-btn svg { width: 20px; height: 20px; fill: #fff; flex-shrink: 0; }
 .wa-hint { font-size: 12px; color: #5a7a9a; margin-top: 4px; }
 
-/* Map inside card */
 .map-container { position: relative; width: 100%; }
 .map-pin-badge {
   position: absolute; bottom: 10px; left: 10px;
@@ -617,7 +667,6 @@ footer { background: #030b1a; border-top: 1px solid rgba(42,127,212,.12); paddin
   padding-bottom: 48px;
 }
 
-/* Brand col */
 .footer-logo-wrap { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
 .footer-logo-img { width: 44px; height: 44px; object-fit: contain; border-radius: 8px; }
 .footer-brand-name { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 800; color: #fff; letter-spacing: .5px; }
@@ -629,13 +678,11 @@ footer { background: #030b1a; border-top: 1px solid rgba(42,127,212,.12); paddin
 .footer-badge--fm  { background: rgba(230,58,30,.1);  border: 1px solid rgba(230,58,30,.32); color: #ff7a6a; }
 .footer-badge--nfpa{ background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); color: #8aadcf; }
 
-/* Nav col */
 .footer-col-title { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; color: #2a7fd4; margin-bottom: 18px; }
 .footer-nav { list-style: none; display: flex; flex-direction: column; gap: 11px; }
 .footer-nav li a { font-size: 14px; color: #4a6a88; text-decoration: none; transition: color .2s; }
 .footer-nav li a:hover { color: #e0eaff; }
 
-/* Contact col */
 .footer-contact-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 16px; }
 .footer-contact-row {
   display: flex; align-items: center; gap: 12px;
@@ -655,7 +702,6 @@ footer { background: #030b1a; border-top: 1px solid rgba(42,127,212,.12); paddin
 .footer-contact-val { font-size: 13px; color: #8aadcf; margin-top: 1px; }
 .footer-coverage { font-size: 12px; color: #354f68; margin-top: 4px; }
 
-/* Divider & bottom bar */
 .footer-divider { max-width: 1060px; margin: 0 auto; border: none; border-top: 1px solid rgba(255,255,255,.055); }
 .footer-bottom {
   max-width: 1060px; margin: 0 auto;
@@ -677,7 +723,6 @@ footer { background: #030b1a; border-top: 1px solid rgba(42,127,212,.12); paddin
 .ds-accent { color: #e63a1e; }
 .ds-tag { font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #2a7fd4; background: rgba(42,127,212,.15); border-radius: 4px; padding: 1px 5px; }
 
-/* Responsive */
 @media (max-width: 768px) {
   .footer-main { grid-template-columns: 1fr; gap: 36px; }
   .contact-cards { grid-template-columns: 1fr; }
@@ -686,5 +731,44 @@ footer { background: #030b1a; border-top: 1px solid rgba(42,127,212,.12); paddin
 </style>
 
 <script src="main.js"></script>
+
+<script>
+(function () {
+  // ── Language toggle ──────────────────────────────────────────────────────
+  let currentLang = localStorage.getItem('gmfs-lang') || 'en';
+
+  const btn      = document.getElementById('langToggle');
+  const optEn    = btn.querySelector('.lang-en');
+  const optEs    = btn.querySelector('.lang-es');
+
+  // Elements that carry both data-en and data-es text (simple text nodes)
+  // We use [data-en] as the selector and set innerHTML from the correct attr
+  function applyLang(lang) {
+    currentLang = lang;
+    localStorage.setItem('gmfs-lang', lang);
+
+    // Update toggle visual
+    optEn.classList.toggle('active', lang === 'en');
+    optEs.classList.toggle('active', lang === 'es');
+
+    // Update html lang attr
+    document.documentElement.lang = lang;
+
+    // Update all tagged elements
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const val = el.getAttribute('data-' + lang);
+      if (val !== null) el.innerHTML = val;
+    });
+  }
+
+  btn.addEventListener('click', () => {
+    applyLang(currentLang === 'en' ? 'es' : 'en');
+  });
+
+  // Init on load
+  applyLang(currentLang);
+})();
+</script>
+
 </body>
 </html>
