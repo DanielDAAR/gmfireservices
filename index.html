@@ -11,7 +11,9 @@
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ════════════════════════════════════════════════
+     NAV (desktop) + HAMBURGER (móvil)
+     ════════════════════════════════════════════════ -->
 <nav>
   <div class="nav-logo">
     <img src="Img/logo.png" alt="GM Fire Services" />
@@ -20,13 +22,14 @@
       <span data-en="Authorized Ruhrpumpen Distributor" data-es="Distribuidor Autorizado Ruhrpumpen">Authorized Ruhrpumpen Distributor</span>
     </div>
   </div>
+
+  <!-- Links visibles en desktop -->
   <ul class="nav-links">
-    <li><a href="#about" data-en="About Us" data-es="Nosotros">About Us</a></li>
-    <li><a href="#products" data-en="Products" data-es="Productos">Products</a></li>
+    <li><a href="#about"          data-en="About Us"       data-es="Nosotros">About Us</a></li>
+    <li><a href="#products"       data-en="Products"       data-es="Productos">Products</a></li>
     <li><a href="#certifications" data-en="Certifications" data-es="Certificaciones">Certifications</a></li>
-    <li><a href="#applications" data-en="Applications" data-es="Aplicaciones">Applications</a></li>
+    <li><a href="#applications"   data-en="Applications"   data-es="Aplicaciones">Applications</a></li>
     <li><a href="#contact" class="nav-cta" data-en="Contact" data-es="Contacto">Contact</a></li>
-    <!-- Language Toggle -->
     <li class="lang-toggle-wrap">
       <button class="lang-toggle" id="langToggle" aria-label="Switch language">
         <span class="lang-option lang-en active">EN</span>
@@ -35,6 +38,40 @@
       </button>
     </li>
   </ul>
+
+  <!-- Botón hamburger (solo visible en móvil) -->
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+</nav>
+
+<!-- Overlay oscuro detrás del drawer -->
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+<!-- Drawer lateral móvil -->
+<nav class="nav-drawer" id="navDrawer" aria-label="Mobile navigation">
+  <ul class="drawer-links">
+    <li><a href="#about"          data-en="About Us"       data-es="Nosotros">About Us</a></li>
+    <li><a href="#products"       data-en="Products"       data-es="Productos">Products</a></li>
+    <li><a href="#certifications" data-en="Certifications" data-es="Certificaciones">Certifications</a></li>
+    <li><a href="#applications"   data-en="Applications"   data-es="Aplicaciones">Applications</a></li>
+    <li><a href="#brand">Ruhrpumpen</a></li>
+    <li><a href="#contact" class="drawer-cta" data-en="Contact" data-es="Contacto">Contact</a></li>
+  </ul>
+
+  <div class="drawer-divider"></div>
+
+  <!-- Language toggle dentro del drawer -->
+  <div class="drawer-lang-wrap">
+    <span class="drawer-lang-label" data-en="Language" data-es="Idioma">Language</span>
+    <button class="lang-toggle" id="langToggleDrawer" aria-label="Switch language">
+      <span class="lang-option lang-en active">EN</span>
+      <span class="lang-divider">|</span>
+      <span class="lang-option lang-es">ES</span>
+    </button>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -198,85 +235,54 @@
     <h2 data-en="Ruhrpumpen fire<br><span class='accent'>suppression</span> pumps" data-es="Bombas contra<br><span class='accent'>incendio</span> Ruhrpumpen">Ruhrpumpen fire<br><span class="accent">suppression</span> pumps</h2>
   </div>
   <div class="products-grid">
-
     <div class="product-card reveal">
       <div class="product-card-bg"></div>
       <div class="product-num">01</div>
-      <div class="product-img-wrap">
-        <img src="Img/imagen2.png" alt="Overhung process pumps" class="product-photo" />
-      </div>
+      <div class="product-img-wrap"><img src="Img/imagen2.png" alt="Overhung process pumps" class="product-photo" /></div>
       <div class="product-name" data-en="Overhung Process Pumps" data-es="Bombas de Proceso en Voladizo">Overhung Process Pumps</div>
       <p class="product-desc" data-en="Our range of heavy-duty overhung (horizontal suction) process pumps for all industries comply with the latest HI, ANSI, ISO and API standards." data-es="Nuestra gama de bombas en voladizo (de succión horizontal) de trabajo pesado para aplicaciones de proceso, para todas las industrias, cumplen con las más recientes normas HI, ANSI, ISO y API.">Our range of heavy-duty overhung (horizontal suction) process pumps for all industries comply with the latest HI, ANSI, ISO and API standards.</p>
-      <div class="product-tags">
-        <span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue">ANSI / API</span>
-      </div>
+      <div class="product-tags"><span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue">ANSI / API</span></div>
     </div>
-
     <div class="product-card reveal reveal-delay-1">
       <div class="product-card-bg"></div>
       <div class="product-num">02</div>
-      <div class="product-img-wrap">
-        <img src="Img/imagen3.png" alt="Vertical inline pumps" class="product-photo" />
-      </div>
+      <div class="product-img-wrap"><img src="Img/imagen3.png" alt="Vertical inline pumps" class="product-photo" /></div>
       <div class="product-name" data-en="Vertical Inline Pumps" data-es="Bombas Verticales en Línea">Vertical Inline Pumps</div>
       <p class="product-desc" data-en="Conforming to HI, ANSI and API standards, our vertical inline centrifugal pump models offer ease of installation and maintenance, with a space-saving design." data-es="Conformes con las normas HI, ANSI y API, nuestros modelos de bombas centrífugas verticales en línea ofrecen facilidad de instalación y mantenimiento, y un diseño que ahorra espacio.">Conforming to HI, ANSI and API standards, our vertical inline centrifugal pump models offer ease of installation and maintenance, with a space-saving design.</p>
-      <div class="product-tags">
-        <span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue">Vertical</span>
-      </div>
+      <div class="product-tags"><span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue">Vertical</span></div>
     </div>
-
     <div class="product-card reveal reveal-delay-2">
       <div class="product-card-bg"></div>
       <div class="product-num">03</div>
-      <div class="product-img-wrap">
-        <img src="Img/imagen4.png" alt="Between bearings pumps" class="product-photo" />
-      </div>
+      <div class="product-img-wrap"><img src="Img/imagen4.png" alt="Between bearings pumps" class="product-photo" /></div>
       <div class="product-name" data-en="Between Bearings Pumps" data-es="Bombas entre Rodamientos">Between Bearings Pumps</div>
       <p class="product-desc" data-en="Designed and built with the latest technology, our range of heavy-duty, single and multistage horizontal between-bearings pumps meet the latest HI and API requirements." data-es="Diseñadas y fabricadas con la última tecnología, nuestra gama de bombas entre rodamientos horizontales, de etapa simple y multietapa, para trabajo pesado, cumplen con los últimos requisitos tanto de HI como de API.">Designed and built with the latest technology, our range of heavy-duty, single and multistage horizontal between-bearings pumps meet the latest HI and API requirements.</p>
-      <div class="product-tags">
-        <span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue">Between Bearings</span>
-      </div>
+      <div class="product-tags"><span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue">Between Bearings</span></div>
     </div>
-
     <div class="product-card reveal">
       <div class="product-card-bg"></div>
       <div class="product-num">04</div>
-      <div class="product-img-wrap">
-        <img src="Img/imagen5.png" alt="Vertical centrifugal pumps" class="product-photo" />
-      </div>
+      <div class="product-img-wrap"><img src="Img/imagen5.png" alt="Vertical centrifugal pumps" class="product-photo" /></div>
       <div class="product-name" data-en="Vertical Centrifugal Pumps" data-es="Bombas Centrífugas Verticales">Vertical Centrifugal Pumps</div>
       <p class="product-desc" data-en="Our vertical shaft pumps have been market leaders since the 1950s, available in single and multistage models with a wide range of hydraulic and mechanical features." data-es="Nuestras bombas de eje vertical han sido líderes en el mercado desde los años 50, y están disponibles en modelos de etapa simple y multietapa, con una amplia gama de características hidráulicas y mecánicas.">Our vertical shaft pumps have been market leaders since the 1950s, available in single and multistage models with a wide range of hydraulic and mechanical features.</p>
-      <div class="product-tags">
-        <span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue" data-en="Multistage" data-es="Multietapa">Multistage</span>
-      </div>
+      <div class="product-tags"><span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue" data-en="Multistage" data-es="Multietapa">Multistage</span></div>
     </div>
-
     <div class="product-card reveal reveal-delay-1">
       <div class="product-card-bg"></div>
       <div class="product-num">05</div>
-      <div class="product-img-wrap">
-        <img src="Img/imagen6.png" alt="Reciprocating piston pumps" class="product-photo" />
-      </div>
+      <div class="product-img-wrap"><img src="Img/imagen6.png" alt="Reciprocating piston pumps" class="product-photo" /></div>
       <div class="product-name" data-en="Reciprocating Piston Pumps" data-es="Bombas Reciprocantes de Pistón">Reciprocating Piston Pumps</div>
       <p class="product-desc" data-en="Our reciprocating piston pump range is available in a variety of sizes, in triplex and quintuplex formats, designed in accordance with API 674 (latest edition)." data-es="Nuestra gama de bombas reciprocantes de pistón están disponibles en una diversidad de tamaños, en formatos triples y quíntuples, y están diseñadas de conformidad con API 674 (última edición).">Our reciprocating piston pump range is available in a variety of sizes, in triplex and quintuplex formats, designed in accordance with API 674 (latest edition).</p>
-      <div class="product-tags">
-        <span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue">API 674</span>
-      </div>
+      <div class="product-tags"><span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue">API 674</span></div>
     </div>
-
     <div class="product-card reveal reveal-delay-2">
       <div class="product-card-bg"></div>
       <div class="product-num">06</div>
-      <div class="product-img-wrap">
-        <img src="Img/imagen7.png" alt="Magnetic drive pumps" class="product-photo" />
-      </div>
+      <div class="product-img-wrap"><img src="Img/imagen7.png" alt="Magnetic drive pumps" class="product-photo" /></div>
       <div class="product-name" data-en="Magnetic Drive Pumps" data-es="Bombas de Accionador Magnético">Magnetic Drive Pumps</div>
       <p class="product-desc" data-en="Our sealless magnetically driven centrifugal pump range is the clear choice for difficult-to-seal chemical handling applications, conforming to API 685 and ISO 2858 design standards." data-es="Nuestra gama de bombas centrífugas de accionamiento magnético sin sello son una clara elección para aplicaciones de manejo de químicos difíciles de sellar, conformes con la norma de diseño API 685 e ISO 2858.">Our sealless magnetically driven centrifugal pump range is the clear choice for difficult-to-seal chemical handling applications, conforming to API 685 and ISO 2858 design standards.</p>
-      <div class="product-tags">
-        <span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue">API 685 / ISO 2858</span>
-      </div>
+      <div class="product-tags"><span class="tag">UL Listed</span><span class="tag">FM Approved</span><span class="tag blue">API 685 / ISO 2858</span></div>
     </div>
-
   </div>
 </section>
 
@@ -321,46 +327,14 @@
     <h2 data-en="Industrial<br><span class='accent'>applications</span>" data-es="Aplicaciones<br><span class='accent'>industriales</span>">Industrial<br><span class="accent">applications</span></h2>
   </div>
   <div class="apps-grid">
-    <div class="app-card reveal">
-      <div class="app-icon">🏭</div>
-      <div class="app-name" data-en="Industrial & Manufacturing" data-es="Industrial & Manufactura">Industrial & Manufacturing</div>
-      <p class="app-desc" data-en="Production, assembly and manufacturing plants with FM requirements for insurer coverage." data-es="Plantas de producción, ensamble y manufactura con requerimientos FM para cobertura de aseguradoras.">Production, assembly and manufacturing plants with FM requirements for insurer coverage.</p>
-    </div>
-    <div class="app-card reveal reveal-delay-1">
-      <div class="app-icon">🛢️</div>
-      <div class="app-name" data-en="Oil & Gas" data-es="Petróleo & Gas">Oil & Gas</div>
-      <p class="app-desc" data-en="Refineries, storage terminals, offshore platforms and high-risk petrochemical plants." data-es="Refinerías, terminales de almacenamiento, plataformas y plantas petroquímicas de alto riesgo.">Refineries, storage terminals, offshore platforms and high-risk petrochemical plants.</p>
-    </div>
-    <div class="app-card reveal reveal-delay-2">
-      <div class="app-icon">🏢</div>
-      <div class="app-name" data-en="Corporate Buildings" data-es="Edificios Corporativos">Corporate Buildings</div>
-      <p class="app-desc" data-en="Office towers, hotels, shopping centers and large-scale real estate developments." data-es="Torres de oficinas, hoteles, centros comerciales y desarrollos inmobiliarios de gran escala.">Office towers, hotels, shopping centers and large-scale real estate developments.</p>
-    </div>
-    <div class="app-card reveal reveal-delay-3">
-      <div class="app-icon">📦</div>
-      <div class="app-name" data-en="Distribution Centers" data-es="Centros de Distribución">Distribution Centers</div>
-      <p class="app-desc" data-en="Warehouses, logistics centers and high-density racking distribution facilities." data-es="Bodegas, almacenes logísticos y centros de distribución con estanterías de alta densidad.">Warehouses, logistics centers and high-density racking distribution facilities.</p>
-    </div>
-    <div class="app-card reveal">
-      <div class="app-icon">⚡</div>
-      <div class="app-name" data-en="Power Generation" data-es="Generación de Energía">Power Generation</div>
-      <p class="app-desc" data-en="Thermoelectric plants, substations and data centers with critical protection requirements." data-es="Plantas termoeléctricas, subestaciones y centros de datos con requerimientos de protección crítica.">Thermoelectric plants, substations and data centers with critical protection requirements.</p>
-    </div>
-    <div class="app-card reveal reveal-delay-1">
-      <div class="app-icon">🏥</div>
-      <div class="app-name" data-en="Healthcare" data-es="Sector Salud">Healthcare</div>
-      <p class="app-desc" data-en="Hospitals, clinics and laboratories where protection system reliability is critical." data-es="Hospitales, clínicas y laboratorios donde la confiabilidad del sistema de protección es crítica.">Hospitals, clinics and laboratories where protection system reliability is critical.</p>
-    </div>
-    <div class="app-card reveal reveal-delay-2">
-      <div class="app-icon">🔬</div>
-      <div class="app-name" data-en="Chemical & Pharmaceutical" data-es="Química & Farmacéutica">Chemical & Pharmaceutical</div>
-      <p class="app-desc" data-en="Chemical and pharmaceutical production plants with hazardous area classification requirements." data-es="Plantas de producción química y farmacéutica con requerimientos de clasificación de áreas peligrosas.">Chemical and pharmaceutical production plants with hazardous area classification requirements.</p>
-    </div>
-    <div class="app-card reveal reveal-delay-3">
-      <div class="app-icon">🚗</div>
-      <div class="app-name" data-en="Automotive" data-es="Automotriz">Automotive</div>
-      <p class="app-desc" data-en="Assembly plants, paint shops and parts warehouses with FM certified protection." data-es="Plantas de ensamble, talleres de pintura y almacenes de partes con protección certificada FM.">Assembly plants, paint shops and parts warehouses with FM certified protection.</p>
-    </div>
+    <div class="app-card reveal"><div class="app-icon">🏭</div><div class="app-name" data-en="Industrial & Manufacturing" data-es="Industrial & Manufactura">Industrial & Manufacturing</div><p class="app-desc" data-en="Production, assembly and manufacturing plants with FM requirements for insurer coverage." data-es="Plantas de producción, ensamble y manufactura con requerimientos FM para cobertura de aseguradoras.">Production, assembly and manufacturing plants with FM requirements for insurer coverage.</p></div>
+    <div class="app-card reveal reveal-delay-1"><div class="app-icon">🛢️</div><div class="app-name" data-en="Oil & Gas" data-es="Petróleo & Gas">Oil & Gas</div><p class="app-desc" data-en="Refineries, storage terminals, offshore platforms and high-risk petrochemical plants." data-es="Refinerías, terminales de almacenamiento, plataformas y plantas petroquímicas de alto riesgo.">Refineries, storage terminals, offshore platforms and high-risk petrochemical plants.</p></div>
+    <div class="app-card reveal reveal-delay-2"><div class="app-icon">🏢</div><div class="app-name" data-en="Corporate Buildings" data-es="Edificios Corporativos">Corporate Buildings</div><p class="app-desc" data-en="Office towers, hotels, shopping centers and large-scale real estate developments." data-es="Torres de oficinas, hoteles, centros comerciales y desarrollos inmobiliarios de gran escala.">Office towers, hotels, shopping centers and large-scale real estate developments.</p></div>
+    <div class="app-card reveal reveal-delay-3"><div class="app-icon">📦</div><div class="app-name" data-en="Distribution Centers" data-es="Centros de Distribución">Distribution Centers</div><p class="app-desc" data-en="Warehouses, logistics centers and high-density racking distribution facilities." data-es="Bodegas, almacenes logísticos y centros de distribución con estanterías de alta densidad.">Warehouses, logistics centers and high-density racking distribution facilities.</p></div>
+    <div class="app-card reveal"><div class="app-icon">⚡</div><div class="app-name" data-en="Power Generation" data-es="Generación de Energía">Power Generation</div><p class="app-desc" data-en="Thermoelectric plants, substations and data centers with critical protection requirements." data-es="Plantas termoeléctricas, subestaciones y centros de datos con requerimientos de protección crítica.">Thermoelectric plants, substations and data centers with critical protection requirements.</p></div>
+    <div class="app-card reveal reveal-delay-1"><div class="app-icon">🏥</div><div class="app-name" data-en="Healthcare" data-es="Sector Salud">Healthcare</div><p class="app-desc" data-en="Hospitals, clinics and laboratories where protection system reliability is critical." data-es="Hospitales, clínicas y laboratorios donde la confiabilidad del sistema de protección es crítica.">Hospitals, clinics and laboratories where protection system reliability is critical.</p></div>
+    <div class="app-card reveal reveal-delay-2"><div class="app-icon">🔬</div><div class="app-name" data-en="Chemical & Pharmaceutical" data-es="Química & Farmacéutica">Chemical & Pharmaceutical</div><p class="app-desc" data-en="Chemical and pharmaceutical production plants with hazardous area classification requirements." data-es="Plantas de producción química y farmacéutica con requerimientos de clasificación de áreas peligrosas.">Chemical and pharmaceutical production plants with hazardous area classification requirements.</p></div>
+    <div class="app-card reveal reveal-delay-3"><div class="app-icon">🚗</div><div class="app-name" data-en="Automotive" data-es="Automotriz">Automotive</div><p class="app-desc" data-en="Assembly plants, paint shops and parts warehouses with FM certified protection." data-es="Plantas de ensamble, talleres de pintura y almacenes de partes con protección certificada FM.">Assembly plants, paint shops and parts warehouses with FM certified protection.</p></div>
   </div>
 </section>
 
@@ -376,27 +350,14 @@
       <p><span data-en="With manufacturing facilities in Germany, Canada, the USA and India, Ruhrpumpen designs and manufactures pumps that meet and exceed the most demanding standards: FM, UL, API, ANSI, ISO and NFPA." data-es="Con instalaciones de manufactura en Alemania, Canadá, EE.UU. e India, Ruhrpumpen diseña y fabrica bombas que cumplen y exceden los más exigentes estándares: FM, UL, API, ANSI, ISO y NFPA.">With manufacturing facilities in Germany, Canada, the USA and India, Ruhrpumpen designs and manufactures pumps that meet and exceed the most demanding standards: FM, UL, API, ANSI, ISO and NFPA.</span></p>
       <p><span data-en="Their fire suppression line is recognized worldwide for its reliability, superior hydraulic performance and long service life." data-es="Su línea contra incendio es reconocida mundialmente por su confiabilidad, desempeño hidráulico superior y larga vida de servicio.">Their fire suppression line is recognized worldwide for its reliability, superior hydraulic performance and long service life.</span></p>
       <div class="brand-stats">
-        <div class="brand-stat">
-          <div class="brand-stat-num">75+</div>
-          <div class="brand-stat-label" data-en="Years of experience" data-es="Años de experiencia">Years of experience</div>
-        </div>
-        <div class="brand-stat">
-          <div class="brand-stat-num">4</div>
-          <div class="brand-stat-label" data-en="Manufacturing plants" data-es="Plantas de manufactura">Manufacturing plants</div>
-        </div>
-        <div class="brand-stat">
-          <div class="brand-stat-num">60+</div>
-          <div class="brand-stat-label" data-en="Countries with presence" data-es="Países con presencia">Countries with presence</div>
-        </div>
-        <div class="brand-stat">
-          <div class="brand-stat-num">NFPA</div>
-          <div class="brand-stat-label" data-en="Standard 20 compliance" data-es="Cumplimiento norma 20">Standard 20 compliance</div>
-        </div>
+        <div class="brand-stat"><div class="brand-stat-num">75+</div><div class="brand-stat-label" data-en="Years of experience" data-es="Años de experiencia">Years of experience</div></div>
+        <div class="brand-stat"><div class="brand-stat-num">4</div><div class="brand-stat-label" data-en="Manufacturing plants" data-es="Plantas de manufactura">Manufacturing plants</div></div>
+        <div class="brand-stat"><div class="brand-stat-num">60+</div><div class="brand-stat-label" data-en="Countries with presence" data-es="Países con presencia">Countries with presence</div></div>
+        <div class="brand-stat"><div class="brand-stat-num">NFPA</div><div class="brand-stat-label" data-en="Standard 20 compliance" data-es="Cumplimiento norma 20">Standard 20 compliance</div></div>
       </div>
     </div>
     <div class="brand-logo-side reveal reveal-delay-2">
-      <div class="brand-logo-main">
-      </div>
+      <div class="brand-logo-main"></div>
       <div class="brand-desc-block">
         <span data-en="<strong>Authorized distributor in Canada</strong><br>GM Fire Services markets Ruhrpumpen FM-approved and UL-listed fire suppression pumps for projects throughout the Canadian Republic." data-es="<strong>Distribuidor autorizado en Canadá</strong><br>GM Fire Services comercializa las bombas contra incendio Ruhrpumpen con aprobación FM y listado UL para proyectos en toda la República Canadiense."><strong>Authorized distributor in Canada</strong><br>GM Fire Services markets Ruhrpumpen FM-approved and UL-listed fire suppression pumps for projects throughout the Canadian Republic.</span>
       </div>
@@ -407,7 +368,6 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-content">
-
     <div class="reveal" style="text-align:center">
       <div class="section-label" style="justify-content:center" data-en="Contact" data-es="Contacto">Contact</div>
       <h2 data-en="Ready to<br><span class='accent'>protect</span> your project?" data-es="¿Listo para<br><span class='accent'>proteger</span> tu proyecto?">Ready to<br><span class="accent">protect</span> your project?</h2>
@@ -415,75 +375,41 @@
         <span data-en="Contact us for specialized technical advice, product information and quotes for your fire protection project." data-es="Contáctanos para recibir asesoría técnica especializada, información de productos y cotizaciones para tu proyecto de protección contra incendio.">Contact us for specialized technical advice, product information and quotes for your fire protection project.</span>
       </p>
     </div>
-
     <div class="contact-cards reveal">
-
       <!-- WhatsApp -->
       <div class="contact-card contact-card--wa">
         <div class="contact-card-icon">💬</div>
         <div class="contact-card-title">WhatsApp</div>
         <div class="contact-card-value">+52 (33) 1693-0869</div>
-        <a
-          class="wa-btn"
-          href="https://wa.me/523316930869?text=Hello%2C%20I%20am%20interested%20in%20learning%20more%20about%20your%20Ruhrpumpen%20fire%20suppression%20pumps."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.122 1.523 5.854L.057 23.882l6.158-1.437A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.799 9.799 0 01-5.001-1.371l-.358-.213-3.714.867.94-3.619-.233-.373A9.762 9.762 0 012.182 12c0-5.419 4.399-9.818 9.818-9.818 5.42 0 9.818 4.399 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/>
-          </svg>
+        <a class="wa-btn" href="https://wa.me/523316930869?text=Hello%2C%20I%20am%20interested%20in%20learning%20more%20about%20your%20Ruhrpumpen%20fire%20suppression%20pumps." target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.122 1.523 5.854L.057 23.882l6.158-1.437A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.799 9.799 0 01-5.001-1.371l-.358-.213-3.714.867.94-3.619-.233-.373A9.762 9.762 0 012.182 12c0-5.419 4.399-9.818 9.818-9.818 5.42 0 9.818 4.399 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
           <span data-en="Open in WhatsApp" data-es="Abrir en WhatsApp">Open in WhatsApp</span>
         </a>
         <span class="wa-hint" data-en="Immediate response during business hours" data-es="Respuesta inmediata en horario laboral">Immediate response during business hours</span>
       </div>
-
       <!-- Email -->
       <div class="contact-card">
         <div class="contact-card-icon">📧</div>
         <div class="contact-card-title" data-en="Email" data-es="Correo Electrónico">Email</div>
         <div class="contact-card-value">
-          <a href="mailto:fireservgm@gmail.com?subject=Solicitud%20de%20servicio&body=Hola,%20me%20gustaría%20más%20información">
-  contacto@gmfireservices.com
-</a>
+          <a href="mailto:fireservgm@gmail.com?subject=Solicitud%20de%20servicio&body=Hola,%20me%20gustaría%20más%20información">contacto@gmfireservices.com</a>
         </div>
         <p style="font-size:13px;color:#5a7a9a;margin-top:10px;text-align:center;line-height:1.5">
           <span data-en="Send us your specifications<br>and receive a detailed quote" data-es="Envíanos tus especificaciones<br>y recibe una cotización detallada">Send us your specifications<br>and receive a detailed quote</span>
         </p>
       </div>
-
       <!-- Map -->
       <div class="contact-card contact-card--map">
         <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.2360!2d-103.39200!3d20.70178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ae2fdeef0daf%3A0xbc4cf0e07e72a8e3!2sPlaza%20Patria!5e0!3m2!1ses-419!2smx!4v1"
-            width="100%"
-            height="200"
-            style="border:0;display:block;border-radius:10px 10px 0 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Map Plaza Patria Guadalajara"
-          ></iframe>
-          <div class="map-pin-badge">
-            <span class="pin-dot"></span>
-            Guadalajara, Jalisco
-          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.2360!2d-103.39200!3d20.70178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ae2fdeef0daf%3A0xbc4cf0e07e72a8e3!2sPlaza%20Patria!5e0!3m2!1ses-419!2smx!4v1" width="100%" height="200" style="border:0;display:block;border-radius:10px 10px 0 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map Plaza Patria Guadalajara"></iframe>
+          <div class="map-pin-badge"><span class="pin-dot"></span>Guadalajara, Jalisco</div>
         </div>
         <div class="map-info">
           <div class="contact-card-title" data-en="Location" data-es="Ubicación">Location</div>
           <div class="contact-card-value" style="font-size:15px">Plaza Patria, Guadalajara, Jal.</div>
-          <a
-            class="maps-btn"
-            href="https://www.google.com/maps/dir/?api=1&destination=Plaza+Patria,+Guadalajara,+Jalisco,+M%C3%A9xico"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-en="📍 Get directions in Google Maps →"
-            data-es="📍 Cómo llegar en Google Maps →"
-          >📍 Get directions in Google Maps →</a>
+          <a class="maps-btn" href="https://www.google.com/maps/dir/?api=1&destination=Plaza+Patria,+Guadalajara,+Jalisco,+M%C3%A9xico" target="_blank" rel="noopener noreferrer" data-en="📍 Get directions in Google Maps →" data-es="📍 Cómo llegar en Google Maps →">📍 Get directions in Google Maps →</a>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -491,7 +417,6 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-main">
-
     <div class="footer-col footer-col--brand">
       <div class="footer-logo-wrap">
         <img src="Img/logo.png" alt="GM Fire Services" class="footer-logo-img" />
@@ -509,7 +434,6 @@
         <span class="footer-badge footer-badge--nfpa">NFPA 20</span>
       </div>
     </div>
-
     <div class="footer-col">
       <div class="footer-col-title" data-en="Navigation" data-es="Navegación">Navigation</div>
       <ul class="footer-nav">
@@ -521,62 +445,28 @@
         <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
       </ul>
     </div>
-
     <div class="footer-col">
       <div class="footer-col-title" data-en="Direct Contact" data-es="Contacto Directo">Direct Contact</div>
       <div class="footer-contact-list">
-
-        <a
-          class="footer-contact-row footer-contact-row--wa"
-          href="https://wa.me/523316930869?text=Hello%2C%20I%20am%20interested%20in%20learning%20more%20about%20your%20Ruhrpumpen%20fire%20suppression%20pumps."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="footer-contact-icon footer-contact-icon--wa">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.122 1.523 5.854L.057 23.882l6.158-1.437A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.799 9.799 0 01-5.001-1.371l-.358-.213-3.714.867.94-3.619-.233-.373A9.762 9.762 0 012.182 12c0-5.419 4.399-9.818 9.818-9.818 5.42 0 9.818 4.399 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/>
-            </svg>
-          </span>
-          <div>
-            <div class="footer-contact-label">WhatsApp</div>
-            <div class="footer-contact-val">+52 (33) 1693-0869</div>
-          </div>
+        <a class="footer-contact-row footer-contact-row--wa" href="https://wa.me/523316930869?text=Hello%2C%20I%20am%20interested%20in%20learning%20more%20about%20your%20Ruhrpumpen%20fire%20suppression%20pumps." target="_blank" rel="noopener noreferrer">
+          <span class="footer-contact-icon footer-contact-icon--wa"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.122 1.523 5.854L.057 23.882l6.158-1.437A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.799 9.799 0 01-5.001-1.371l-.358-.213-3.714.867.94-3.619-.233-.373A9.762 9.762 0 012.182 12c0-5.419 4.399-9.818 9.818-9.818 5.42 0 9.818 4.399 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg></span>
+          <div><div class="footer-contact-label">WhatsApp</div><div class="footer-contact-val">+52 (33) 1693-0869</div></div>
         </a>
-
         <a class="footer-contact-row" href="mailto:contacto@gmfireservices.com">
           <span class="footer-contact-icon">📧</span>
-          <div>
-            <div class="footer-contact-label" data-en="Email" data-es="Correo">Email</div>
-            <div class="footer-contact-val">fireservgm@gmail.com</div>
-          </div>
+          <div><div class="footer-contact-label" data-en="Email" data-es="Correo">Email</div><div class="footer-contact-val">fireservgm@gmail.com</div></div>
         </a>
-
-        <a
-          class="footer-contact-row"
-          href="https://www.google.com/maps/dir/?api=1&destination=Plaza+Patria,+Guadalajara,+Jalisco,+M%C3%A9xico"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="footer-contact-row" href="https://www.google.com/maps/dir/?api=1&destination=Plaza+Patria,+Guadalajara,+Jalisco,+M%C3%A9xico" target="_blank" rel="noopener noreferrer">
           <span class="footer-contact-icon">📍</span>
-          <div>
-            <div class="footer-contact-label" data-en="Location" data-es="Ubicación">Location</div>
-            <div class="footer-contact-val">Plaza Patria, Guadalajara, Jal.</div>
-          </div>
+          <div><div class="footer-contact-label" data-en="Location" data-es="Ubicación">Location</div><div class="footer-contact-val">Plaza Patria, Guadalajara, Jal.</div></div>
         </a>
-
       </div>
       <div class="footer-coverage" data-en="Coverage: Mexican Republic" data-es="Cobertura: República Mexicana">Coverage: Mexican Republic</div>
     </div>
-
   </div>
-
   <div class="footer-divider"></div>
-
   <div class="footer-bottom">
-    <div class="footer-copy">
-      <span data-en="© 2026 GM Fire Services · All rights reserved" data-es="© 2026 GM Fire Services · Todos los derechos reservados">© 2026 GM Fire Services · All rights reserved</span>
-    </div>
+    <div class="footer-copy"><span data-en="© 2026 GM Fire Services · All rights reserved" data-es="© 2026 GM Fire Services · Todos los derechos reservados">© 2026 GM Fire Services · All rights reserved</span></div>
     <div class="footer-dev-credit">
       <span class="footer-dev-text" data-en="Developed by" data-es="Desarrollado por">Developed by</span>
       <a class="footer-dev-badge" href="mailto:contacto@danielsoftworks.com" title="DanielSoftworks — Professional Web Development">
@@ -587,188 +477,38 @@
   </div>
 </footer>
 
-<style>
-/* ── LANGUAGE TOGGLE ─────────────────────── */
-.lang-toggle-wrap { display: flex; align-items: center; }
-.lang-toggle {
-  display: flex; align-items: center; gap: 3px;
-  background: rgba(42,127,212,.08);
-  border: 1px solid rgba(42,127,212,.22);
-  border-radius: 6px;
-  padding: 5px 10px;
-  cursor: pointer;
-  transition: background .2s, border-color .2s;
-  font-family: 'Barlow', sans-serif;
-}
-.lang-toggle:hover { background: rgba(42,127,212,.18); border-color: rgba(42,127,212,.4); }
-.lang-option {
-  font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
-  color: #4a6a88; transition: color .2s;
-  line-height: 1;
-}
-.lang-option.active { color: #5aadff; }
-.lang-divider { font-size: 10px; color: #253a52; }
-
-/* ── CONTACT ─────────────────────────────── */
-#contact { padding: 96px 40px; background: linear-gradient(180deg, #050f24 0%, #071830 100%); border-top: 1px solid rgba(42,127,212,.15); }
-.contact-content { max-width: 1060px; margin: 0 auto; }
-.contact-sub { max-width: 560px; margin: 16px auto 52px; font-size: 16px; color: #8aadcf; text-align: center; line-height: 1.65; }
-.contact-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
-
-.contact-card {
-  background: rgba(13,48,104,.45);
-  border: 1px solid rgba(42,127,212,.22);
-  border-radius: 16px;
-  padding: 36px 28px;
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-  transition: border-color .25s, transform .25s;
-  text-align: center;
-}
-.contact-card:hover { border-color: rgba(42,127,212,.55); transform: translateY(-4px); }
-.contact-card--map { padding: 0; overflow: hidden; gap: 0; }
-
-.contact-card-icon { font-size: 28px; margin-bottom: 4px; }
-.contact-card-title { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 600; color: #6a90b8; }
-.contact-card-value { font-size: 16px; font-weight: 600; color: #e0eaff; }
-.contact-card-value a { color: #e0eaff; text-decoration: none; transition: color .2s; }
-.contact-card-value a:hover { color: #5aadff; }
-
-.wa-btn {
-  display: inline-flex; align-items: center; gap: 9px;
-  background: #25d366; color: #fff; font-weight: 700; font-size: 14px;
-  padding: 12px 26px; border-radius: 40px; text-decoration: none;
-  letter-spacing: .4px; transition: background .2s, transform .2s;
-  margin-top: 6px;
-}
-.wa-btn:hover { background: #1ebe5d; transform: scale(1.04); }
-.wa-btn svg { width: 20px; height: 20px; fill: #fff; flex-shrink: 0; }
-.wa-hint { font-size: 12px; color: #5a7a9a; margin-top: 4px; }
-
-.map-container { position: relative; width: 100%; }
-.map-pin-badge {
-  position: absolute; bottom: 10px; left: 10px;
-  background: rgba(5,15,36,.88); border: 1px solid rgba(42,127,212,.4);
-  border-radius: 8px; padding: 6px 12px;
-  display: flex; align-items: center; gap: 7px;
-  font-size: 12px; color: #cde; font-weight: 500; pointer-events: none;
-}
-.pin-dot { width: 7px; height: 7px; border-radius: 50%; background: #e63a1e; box-shadow: 0 0 0 3px rgba(230,58,30,.25); flex-shrink: 0; }
-.map-info { padding: 18px 22px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
-.maps-btn {
-  display: inline-block; margin-top: 4px;
-  font-size: 13px; font-weight: 700; color: #e63a1e;
-  text-decoration: none; transition: color .2s; letter-spacing: .3px;
-}
-.maps-btn:hover { color: #ff6b53; }
-
-/* ── FOOTER ──────────────────────────────── */
-footer { background: #030b1a; border-top: 1px solid rgba(42,127,212,.12); padding: 60px 40px 0; }
-
-.footer-main {
-  max-width: 1060px; margin: 0 auto;
-  display: grid; grid-template-columns: 1.5fr 1fr 1.2fr; gap: 52px;
-  padding-bottom: 48px;
-}
-
-.footer-logo-wrap { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
-.footer-logo-img { width: 44px; height: 44px; object-fit: contain; border-radius: 8px; }
-.footer-brand-name { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 800; color: #fff; letter-spacing: .5px; }
-.footer-brand-sub { font-size: 11px; color: #2a7fd4; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
-.footer-desc { font-size: 14px; color: #4a6a88; line-height: 1.7; margin-bottom: 20px; }
-.footer-badges { display: flex; gap: 8px; flex-wrap: wrap; }
-.footer-badge { padding: 4px 11px; border-radius: 6px; font-size: 11px; font-weight: 700; letter-spacing: 1px; }
-.footer-badge--ul  { background: rgba(42,127,212,.14); border: 1px solid rgba(42,127,212,.38); color: #5aadff; }
-.footer-badge--fm  { background: rgba(230,58,30,.1);  border: 1px solid rgba(230,58,30,.32); color: #ff7a6a; }
-.footer-badge--nfpa{ background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); color: #8aadcf; }
-
-.footer-col-title { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; color: #2a7fd4; margin-bottom: 18px; }
-.footer-nav { list-style: none; display: flex; flex-direction: column; gap: 11px; }
-.footer-nav li a { font-size: 14px; color: #4a6a88; text-decoration: none; transition: color .2s; }
-.footer-nav li a:hover { color: #e0eaff; }
-
-.footer-contact-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 16px; }
-.footer-contact-row {
-  display: flex; align-items: center; gap: 12px;
-  text-decoration: none; transition: opacity .2s;
-}
-.footer-contact-row:hover { opacity: .8; }
-.footer-contact-row--wa .footer-contact-icon { background: rgba(37,211,102,.12); border-color: rgba(37,211,102,.28); }
-.footer-contact-row--wa .footer-contact-val { color: #4de389; }
-.footer-contact-icon {
-  width: 36px; height: 36px; border-radius: 8px; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  background: rgba(42,127,212,.1); border: 1px solid rgba(42,127,212,.22);
-  font-size: 16px;
-}
-.footer-contact-icon svg { width: 18px; height: 18px; fill: #25d366; }
-.footer-contact-label { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #4a6a88; font-weight: 600; }
-.footer-contact-val { font-size: 13px; color: #8aadcf; margin-top: 1px; }
-.footer-coverage { font-size: 12px; color: #354f68; margin-top: 4px; }
-
-.footer-divider { max-width: 1060px; margin: 0 auto; border: none; border-top: 1px solid rgba(255,255,255,.055); }
-.footer-bottom {
-  max-width: 1060px; margin: 0 auto;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 20px 0 30px; flex-wrap: wrap; gap: 12px;
-}
-.footer-copy { font-size: 13px; color: #2e4a62; }
-.footer-dev-credit { display: flex; align-items: center; gap: 9px; }
-.footer-dev-text { font-size: 12px; color: #2e4a62; }
-.footer-dev-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: rgba(42,127,212,.09);
-  border: 1px solid rgba(42,127,212,.2);
-  border-radius: 7px; padding: 4px 12px;
-  text-decoration: none; transition: border-color .2s, background .2s;
-}
-.footer-dev-badge:hover { background: rgba(42,127,212,.18); border-color: rgba(42,127,212,.4); }
-.ds-logo-text { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 800; letter-spacing: .5px; color: #8ab8e0; }
-.ds-accent { color: #e63a1e; }
-.ds-tag { font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #2a7fd4; background: rgba(42,127,212,.15); border-radius: 4px; padding: 1px 5px; }
-
-@media (max-width: 768px) {
-  .footer-main { grid-template-columns: 1fr; gap: 36px; }
-  .contact-cards { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
-}
-</style>
-
 <script src="main.js"></script>
 
 <script>
 (function () {
-  // ── Language toggle ──────────────────────────────────────────────────────
+  // ── Language toggle (funciona tanto en desktop como en el drawer) ──────────
   let currentLang = localStorage.getItem('gmfs-lang') || 'en';
 
-  const btn      = document.getElementById('langToggle');
-  const optEn    = btn.querySelector('.lang-en');
-  const optEs    = btn.querySelector('.lang-es');
+  // Todos los botones de idioma (desktop + drawer)
+  const allLangBtns = document.querySelectorAll('.lang-toggle');
 
-  // Elements that carry both data-en and data-es text (simple text nodes)
-  // We use [data-en] as the selector and set innerHTML from the correct attr
   function applyLang(lang) {
     currentLang = lang;
     localStorage.setItem('gmfs-lang', lang);
-
-    // Update toggle visual
-    optEn.classList.toggle('active', lang === 'en');
-    optEs.classList.toggle('active', lang === 'es');
-
-    // Update html lang attr
     document.documentElement.lang = lang;
 
-    // Update all tagged elements
+    // Actualizar indicadores de todos los toggles
+    allLangBtns.forEach(btn => {
+      btn.querySelector('.lang-en').classList.toggle('active', lang === 'en');
+      btn.querySelector('.lang-es').classList.toggle('active', lang === 'es');
+    });
+
+    // Actualizar contenido de la página
     document.querySelectorAll('[data-en]').forEach(el => {
       const val = el.getAttribute('data-' + lang);
       if (val !== null) el.innerHTML = val;
     });
   }
 
-  btn.addEventListener('click', () => {
-    applyLang(currentLang === 'en' ? 'es' : 'en');
+  allLangBtns.forEach(btn => {
+    btn.addEventListener('click', () => applyLang(currentLang === 'en' ? 'es' : 'en'));
   });
 
-  // Init on load
   applyLang(currentLang);
 })();
 </script>
