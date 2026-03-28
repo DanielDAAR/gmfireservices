@@ -132,7 +132,7 @@ nav {
 .nav-drawer {
   display: none;
   position: fixed;
-  top: 72px; right: 0; bottom: 0;
+  top: 64px; right: 0; bottom: 0;
   width: min(82vw, 300px);
   background: rgba(8,20,42,0.98);
   border-left: 1px solid rgba(42,127,212,0.2);
@@ -773,13 +773,26 @@ footer {
    ══════════════════════════════════════════ */
 @media (max-width: 768px) {
 
-  /* Nav fija, siempre 72px, nunca crece */
+  /* Nav fija, siempre 64px, nunca crece */
   nav {
     flex-direction: row;
-    height: 72px;
-    padding: 0 20px;
+    height: 64px;
+    padding: 0 16px;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .nav-logo img {
+    height: 36px;
+  }
+
+  .nav-brand {
+    font-size: 0.95rem;
+  }
+
+  .nav-brand span {
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
   }
 
   /* Ocultar links del desktop */
@@ -792,8 +805,8 @@ footer {
   .nav-overlay { display: block; }
   .nav-drawer  { display: block; }
 
-  /* Hero y secciones no necesitan offset extra */
-  #hero { padding-top: 72px; }
+  /* Hero offset igual a la altura del nav */
+  #hero { padding-top: 64px; }
 
   /* Ajustes de layout */
   .about-grid, .brand-inner { gap: 36px; }
