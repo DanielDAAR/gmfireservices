@@ -23,7 +23,7 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// ── Hamburger / Drawer ───────────────────────────────────────────────────────
+// ── Hamburger / Drawer con control de pointer-events en móvil ────────────────
 (function () {
   const hamburger = document.getElementById('navHamburger');
   const drawer    = document.getElementById('navDrawer');
@@ -31,12 +31,17 @@ window.addEventListener('scroll', () => {
 
   if (!hamburger || !drawer || !overlay) return;
 
+  const isMobile = () => window.innerWidth <= 768;
+
   function openDrawer() {
     drawer.classList.add('open');
     overlay.classList.add('visible');
     hamburger.classList.add('open');
     hamburger.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
+    if (isMobile()) {
+      overlay.style.pointerEvents = 'auto';   // bloquea clics en el fondo
+    }
   }
 
   function closeDrawer() {
@@ -45,6 +50,9 @@ window.addEventListener('scroll', () => {
     hamburger.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+    if (isMobile()) {
+      overlay.style.pointerEvents = 'none';   // deja pasar los clics al contenido
+    }
   }
 
   hamburger.addEventListener('click', () => {
@@ -64,72 +72,27 @@ window.addEventListener('scroll', () => {
   window.matchMedia('(min-width: 769px)').addEventListener('change', e => {
     if (e.matches) closeDrawer();
   });
-})();
 
-// ── SOLUCIÓN: Eliminar elementos fantasma que bloquean clics en móviles ─────
-(function fixMobileClickIssues() {
-  // Detectar si es móvil por el ancho de pantalla
-  const isMobile = () => window.innerWidth <= 768;
-  
-  // Función para remover cualquier elemento que pueda estar bloqueando clics
-  function removeBlockingOverlays() {
-    if (!isMobile()) return;
-    
-    // Buscar elementos que puedan tener pointer-events: none en móvil pero no deberían
-    const allElements = document.querySelectorAll('*');
-    allElements.forEach(el => {
-      const style = window.getComputedStyle(el);
-      // Si algún elemento tiene pointer-events: none y no es el overlay/drawer cerrado, forzar a auto
-      if (style.pointerEvents === 'none') {
-        // Excepciones: overlay y drawer cuando están cerrados
-        const isOverlay = el.id === 'navOverlay';
-        const isDrawer = el.id === 'navDrawer';
-        const isHamburger = el.id === 'navHamburger';
-        
-        if (!isOverlay && !isDrawer && !isHamburger) {
-          el.style.pointerEvents = 'auto';
-        }
-      }
-    });
+  // Inicializar overlay en móvil (deshabilitado para no bloquear)
+  if (isMobile()) {
+    overlay.style.pointerEvents = 'none';
   }
-  
-  // Ejecutar al cargar y cada vez que cambie el tamaño
-  removeBlockingOverlays();
-  window.addEventListener('resize', removeBlockingOverlays);
-  
-  // Asegurar que todos los botones tengan cursor pointer y sean clickeables
-  const allButtons = document.querySelectorAll('.btn-primary, .btn-secondary, .nav-cta, .drawer-cta, .wa-btn, .maps-btn, .footer-contact-row');
-  allButtons.forEach(btn => {
-    btn.style.cursor = 'pointer';
-    btn.addEventListener('touchstart', function(e) {
-      // Solo para dar feedback visual en móvil
-      this.style.opacity = '0.7';
-      setTimeout(() => {
-        this.style.opacity = '';
-      }, 150);
-    });
-    btn.addEventListener('touchend', function(e) {
-      this.style.opacity = '';
-    });
-  });
 })();
 
-// ── SOLUCIÓN PARA MÓVILES: scroll con offset por el menú fijo ────────────────
+// ── Scroll suave con offset para menú fijo (funciona en móvil y escritorio) ──
 (function() {
   const getNavHeight = () => {
     const nav = document.querySelector('nav');
     return nav ? nav.offsetHeight : 64;
   };
-
   const OFFSET = 20;
 
+  // Clonamos todos los enlaces internos para eliminar cualquier evento conflictivo
   const internalLinks = document.querySelectorAll('a[href^="#"]');
-
   internalLinks.forEach(link => {
-    // Eliminar cualquier evento anterior para evitar duplicados
     const newLink = link.cloneNode(true);
     link.parentNode.replaceChild(newLink, link);
-    
+
     newLink.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
       if (href === '#' || href === '') return;
@@ -155,19 +118,15 @@ window.addEventListener('scroll', () => {
   });
 })();
 
-// ── FORZAR REPINTADO EN MÓVILES PARA GARANTIZAR CLICS ────────────────────────
-(function forceTouchResponsiveness() {
+// ── Forzar clickeabilidad en móviles (elimina cualquier pointer-events no deseado) ──
+(function ensureMobileClicks() {
   if ('ontouchstart' in window) {
-    // Forzar que todos los elementos con href tengan cursor pointer
-    const allLinks = document.querySelectorAll('a');
-    allLinks.forEach(link => {
-      link.style.cursor = 'pointer';
-      // Eliminar cualquier clase o estilo que pueda estar bloqueando
-      link.style.pointerEvents = 'auto';
+    const allClickable = document.querySelectorAll('a, button, .btn-primary, .btn-secondary, .wa-btn, .maps-btn, .footer-contact-row');
+    allClickable.forEach(el => {
+      el.style.cursor = 'pointer';
+      el.style.pointerEvents = 'auto';
+      // Pequeño touchstart para activar la respuesta táctil
+      el.addEventListener('touchstart', () => {});
     });
-    
-    // Forzar que el body no tenga elementos que bloqueen
-    document.body.style.touchAction = 'auto';
-    document.body.style.webkitTapHighlightColor = 'rgba(0,0,0,0)';
   }
 })();
