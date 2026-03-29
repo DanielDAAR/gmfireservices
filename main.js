@@ -36,7 +36,7 @@ window.addEventListener('scroll', () => {
     overlay.classList.add('visible');
     hamburger.classList.add('open');
     hamburger.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden'; // evita scroll del fondo
+    document.body.style.overflow = 'hidden';
   }
 
   function closeDrawer() {
@@ -51,21 +51,58 @@ window.addEventListener('scroll', () => {
     drawer.classList.contains('open') ? closeDrawer() : openDrawer();
   });
 
-  // Cerrar al hacer clic en el overlay
   overlay.addEventListener('click', closeDrawer);
 
-  // Cerrar al hacer clic en un link del drawer
   drawer.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeDrawer);
   });
 
-  // Cerrar con Escape
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeDrawer();
   });
 
-  // Al cambiar a desktop, cerrar por si acaso
   window.matchMedia('(min-width: 769px)').addEventListener('change', e => {
     if (e.matches) closeDrawer();
+  });
+})();
+
+// ── SOLUCIÓN PARA MÓVILES: scroll con offset por el menú fijo ────────────────
+(function() {
+  // Altura del menú fijo (se ajusta automáticamente a la altura real del nav)
+  const getNavHeight = () => {
+    const nav = document.querySelector('nav');
+    return nav ? nav.offsetHeight : 64;
+  };
+
+  // Offset adicional para que la sección quede más visible (20px)
+  const OFFSET = 20;
+
+  // Selecciona todos los enlaces internos (los que empiezan con #)
+  const internalLinks = document.querySelectorAll('a[href^="#"]');
+
+  internalLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      // Ignorar si es solo "#" o está vacío
+      if (href === '#' || href === '') return;
+
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (!targetElement) return;
+
+      e.preventDefault();
+
+      const navHeight = getNavHeight();
+      const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = targetPosition - navHeight - OFFSET;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+
+      // Opcional: actualizar la URL sin recargar
+      history.pushState(null, null, href);
+    });
   });
 })();
