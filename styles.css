@@ -758,6 +758,126 @@ footer {
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
+/* ---------- GEAR (TRAJE DE BOMBERO) ---------- */
+#gear {
+  background: linear-gradient(180deg, #060d1c 0%, #080f1e 100%);
+  position: relative; overflow: hidden;
+}
+#gear::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(230,58,30,0.4), transparent);
+}
+.gear-header {
+  max-width: 1200px; margin: 0 auto 60px;
+}
+.gear-intro {
+  max-width: 640px;
+  font-size: 1rem; font-weight: 300; line-height: 1.75;
+  color: rgba(255,255,255,0.6);
+  margin-top: 16px;
+}
+.gear-intro strong { color: var(--white); font-weight: 500; }
+
+.gear-grid {
+  max-width: 1200px; margin: 0 auto 64px;
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+}
+.gear-card {
+  background: rgba(11,31,58,0.55);
+  border: 1px solid rgba(42,127,212,0.1);
+  padding: 28px 22px;
+  position: relative; overflow: hidden;
+  transition: border-color 0.3s, background 0.3s, transform 0.3s;
+}
+.gear-card:hover {
+  border-color: rgba(230,58,30,0.4);
+  background: rgba(13,48,104,0.35);
+  transform: translateY(-3px);
+}
+.gear-card-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.8rem; font-weight: 800;
+  color: rgba(230,58,30,0.08);
+  line-height: 1; position: absolute; top: 12px; right: 16px;
+}
+.gear-card-icon {
+  font-size: 2rem; margin-bottom: 14px; display: block;
+  filter: drop-shadow(0 2px 8px rgba(230,58,30,0.3));
+}
+.gear-card-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  color: var(--white);
+}
+.gear-card-desc {
+  font-size: 0.8rem; line-height: 1.6;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 14px;
+}
+.gear-card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: auto; }
+.gear-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; padding: 2px 8px;
+  background: rgba(42,127,212,0.12);
+  border: 1px solid rgba(42,127,212,0.28);
+  color: var(--blue-glow);
+}
+.gear-tag--fire {
+  background: rgba(230,58,30,0.1);
+  border-color: rgba(230,58,30,0.28);
+  color: var(--fire-orange);
+}
+
+/* Brand showcase */
+.gear-brands {
+  max-width: 1200px; margin: 0 auto;
+}
+.gear-brands-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--fire-orange); margin-bottom: 20px;
+  display: flex; align-items: center; gap: 12px;
+}
+.gear-brands-label::before {
+  content: ''; display: block;
+  width: 32px; height: 2px; background: var(--fire-orange);
+}
+.gear-brands-row {
+  display: flex; gap: 2px;
+}
+.gear-brand-card {
+  flex: 1;
+  display: flex; align-items: center; gap: 28px;
+  background: rgba(13,48,104,0.3);
+  border: 1px solid rgba(42,127,212,0.18);
+  padding: 32px 36px;
+  transition: border-color 0.3s;
+}
+.gear-brand-card:hover { border-color: rgba(42,127,212,0.4); }
+.gear-brand-divider { width: 2px; background: rgba(255,255,255,0.04); flex-shrink: 0; }
+.gear-brand-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.2rem; font-weight: 800;
+  letter-spacing: 0.05em; flex-shrink: 0;
+  line-height: 1;
+}
+.gear-brand-logo--globe { color: var(--fire-orange); }
+.gear-brand-logo--firedex { color: var(--fire-red); }
+.gear-brand-name-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 6px; color: var(--white);
+}
+.gear-brand-desc {
+  font-size: 0.82rem; line-height: 1.6;
+  color: rgba(255,255,255,0.5);
+}
+
 /* ══════════════════════════════════════════
    RESPONSIVE — TABLETS (≤ 900px)
    ══════════════════════════════════════════ */
@@ -767,6 +887,9 @@ footer {
   .products-grid { grid-template-columns: 1fr 1fr; }
   .apps-grid { grid-template-columns: repeat(2,1fr); }
   .contact-cards { grid-template-columns: 1fr; }
+  .gear-grid { grid-template-columns: repeat(2, 1fr); }
+  .gear-brands-row { flex-direction: column; }
+  .gear-brand-divider { width: 100%; height: 2px; }
 }
 
 /* ══════════════════════════════════════════
@@ -813,6 +936,7 @@ footer {
   /* Ajustes de layout */
   .about-grid, .brand-inner { gap: 36px; }
   .products-grid { grid-template-columns: 1fr; }
+  .gear-grid { grid-template-columns: 1fr 1fr; }
   .about-features .feature-item { flex-direction: column; align-items: flex-start; }
   .brand-stats { grid-template-columns: 1fr 1fr; gap: 2px; }
   .footer-main { grid-template-columns: 1fr; gap: 36px; }
@@ -828,6 +952,8 @@ footer {
    ══════════════════════════════════════════ */
 @media (max-width: 480px) {
   .apps-grid { grid-template-columns: 1fr; }
+  .gear-grid { grid-template-columns: 1fr; }
+  .gear-brand-card { flex-direction: column; gap: 14px; padding: 24px 20px; }
   .cert-block { padding: 30px 20px; }
   .cert-block-logo { font-size: 3rem; }
   .contact-card { padding: 24px 16px; }
