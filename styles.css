@@ -1019,3 +1019,362 @@ footer {
   .gear-icon { font-size: 1.3rem; }
   .gear-brand-panel { padding: 28px 22px; }
 }
+
+
+/* ══════════════════════════════════════════
+   GEAR SECTION — REDESIGNED
+   ══════════════════════════════════════════ */
+#gear {
+  background: linear-gradient(180deg, #050d1a 0%, #070e1d 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 100px 4vw;
+}
+#gear::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(230,58,30,0.45), transparent);
+}
+
+/* ── Top header row ── */
+.gear-top {
+  max-width: 1200px;
+  margin: 0 auto 64px;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  align-items: end;
+}
+.gear-intro {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.6);
+  border-left: 2px solid var(--fire-red);
+  padding-left: 20px;
+}
+.gear-intro strong {
+  color: var(--white);
+  font-weight: 500;
+}
+
+/* ── Items grid ── */
+.gear-grid {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* ── Gear Item Card ── */
+.gear-item {
+  display: flex;
+  flex-direction: row;
+  background: rgba(11,31,58,0.5);
+  border: 1px solid rgba(42,127,212,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.28s ease, background 0.28s ease, transform 0.28s ease, box-shadow 0.28s ease;
+}
+.gear-item:hover {
+  border-color: rgba(230,58,30,0.35);
+  background: rgba(13,48,104,0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(230,58,30,0.08);
+}
+
+/* ── Visual Column (Left) ── */
+.gear-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 24px 16px;
+  min-width: 140px;
+  max-width: 160px;
+  background: rgba(0,0,0,0.15);
+  border-right: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+}
+
+.gear-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: var(--fire-orange);
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.gear-img-wrap {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+}
+
+.gear-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.4s ease;
+  padding: 8px;
+}
+.gear-item:hover .gear-img {
+  transform: scale(1.05);
+}
+
+/* ── Content Column (Right) ── */
+.gear-content {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  justify-content: center;
+}
+
+.gear-item-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.gear-item-desc {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.55);
+}
+
+/* ── Tags ── */
+.gear-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.gear-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  background: rgba(42,127,212,0.1);
+  border: 1px solid rgba(42,127,212,0.28);
+  border-radius: 4px;
+  color: var(--blue-glow);
+  transition: background 0.2s ease;
+}
+.gear-tag:hover {
+  background: rgba(42,127,212,0.2);
+}
+.gear-tag--nfpa {
+  background: rgba(230,58,30,0.1);
+  border-color: rgba(230,58,30,0.3);
+  color: var(--fire-orange);
+}
+.gear-tag--nfpa:hover {
+  background: rgba(230,58,30,0.2);
+}
+
+/* ── Brand block ── */
+.gear-brands-block {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.gear-brands-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--fire-orange);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.gear-brands-eyebrow::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--fire-orange);
+}
+.gear-brands-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.gear-brand-panel {
+  padding: 44px 48px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: border-color 0.3s ease;
+  border-radius: 12px;
+}
+.gear-brand-panel--globe {
+  background: rgba(13,48,104,0.3);
+  border: 1px solid rgba(42,127,212,0.2);
+}
+.gear-brand-panel--globe:hover {
+  border-color: rgba(42,127,212,0.45);
+}
+.gear-brand-panel--firedex {
+  background: rgba(230,58,30,0.05);
+  border: 1px solid rgba(230,58,30,0.18);
+}
+.gear-brand-panel--firedex:hover {
+  border-color: rgba(230,58,30,0.4);
+}
+
+.gear-brand-wordmark {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+.gear-brand-panel--globe .gear-brand-wordmark {
+  color: var(--blue-glow);
+}
+.gear-brand-panel--firedex .gear-brand-wordmark {
+  color: var(--fire-orange);
+}
+
+.gear-brand-subtitle {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 6px;
+}
+.gear-brand-copy {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.58);
+}
+.gear-brand-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+.gear-cert-pill {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 4px 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  color: rgba(255,255,255,0.55);
+}
+.gear-cert-pill--ul {
+  background: rgba(42,127,212,0.1);
+  border-color: rgba(42,127,212,0.3);
+  color: var(--blue-glow);
+}
+
+/* ══════════════════════════════════════════
+   GEAR RESPONSIVE
+   ══════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .gear-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .gear-item {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 900px) {
+  .gear-top {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .gear-brands-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gear-item {
+    flex-direction: column;
+  }
+  .gear-visual {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 16px 20px;
+    min-width: unset;
+    max-width: unset;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .gear-img-wrap {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+  }
+  .gear-content {
+    padding: 20px 24px;
+  }
+  .gear-brand-panel {
+    padding: 32px 28px;
+  }
+  .gear-brand-wordmark {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gear-visual {
+    padding: 14px 16px;
+  }
+  .gear-img-wrap {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+  }
+  .gear-content {
+    padding: 16px 18px;
+  }
+  .gear-item-name {
+    font-size: 1rem;
+  }
+  .gear-item-desc {
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+  .gear-brand-panel {
+    padding: 28px 22px;
+  }
+  .gear-brand-wordmark {
+    font-size: 2rem;
+  }
+}
